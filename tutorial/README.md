@@ -6,6 +6,7 @@
 - Vitis HLS 2020.2
 - Vivado 2020.2
 - Xilinx Ultra96 V2 FPGA Evaluation Board
+Note: Xilinx has a Y2K bug starting 2022 so please apply fixes first...
 
 ## Enviroment Setup
 
