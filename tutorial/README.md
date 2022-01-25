@@ -1,6 +1,6 @@
 # Build a vector addition using Vitis HLS and Vivado
 
-*Acknoledgement: this tutorial is written by Yihan Jiang and revised by Callie Hao at Georgia Tech ECE.*
+*Acknowledgment: this tutorial is written by Yihan Jiang and revised by Callie Hao at Georgia Tech ECE.*
 
 ## Preliminary
 - Vitis HLS 2020.2
@@ -8,7 +8,7 @@
 - Xilinx Ultra96 V2 FPGA Evaluation Board
 Note: Xilinx has a Y2K bug starting 2022 so please apply fixes first...
 
-## Enviroment Setup
+## Environment Setup
 
 Assume you have Vitis HLS and Vivado installed. Please execute the following commands, or add them to your bash file.
 ```sh
@@ -24,13 +24,13 @@ We first build a vector addition function using C++ in Vitis HLS. Later, we expo
 
 ### Steps
 
-1. Create a new project; specify the project name. It is not necessay to specify the top function nor the testbench now.
+1. Create a new project; specify the project name. It is not necessary to specify the top function nor the testbench now.
 
 2. Select the correct `part` or `board` in the Part Selection during project initialization. 
 	- For PYNQ-Z2, select part `xc7z020clg400-1` with 220 DSPs.
 	- For Ultra96, select part `xczu3eg-sbva484-1-e` with 360 DSPs.
 
-3. Now we can write our acclerator in c++ and simulate with Vitis. Create a new source file named `top.c` as the following:
+3. Now we can write our accelerator in c++ and simulate with Vitis. Create a new source file named `top.c` as the following:
 
 ```cpp
 void top(int a[100], int b[100], int sum[100]) {
@@ -81,10 +81,10 @@ int main()
 
 ### Steps
 
-1. Create a new project, name it as `adderProject`. Make sure you select the same board you're using. If you cannot find it, there is an `install board` icon at top right coner where you can install your own board.
+1. Create a new project, name it as `adderProject`. Make sure you select the same board you're using. If you cannot find it, there is an `install board` icon at top right corner where you can install your own board.
 
 2. Add our vector addition ip core to the Vivado. Click `IP Catalog` at the left column, right click the `Vivado Repository`, and select `Add Repository`.
-Select the folder that includes your HLS solution. After click the `select` button, you will see a small page telling you that "1 repository was added to the project". Expand the IPs tab. If you see the top ip with an orange icon, it means no issue
+Select the folder that includes your HLS solution. After click the `select` button, you will see a small page telling you that "1 repository was added to the project". Expand the IPs tab. If you see the top IP with an orange icon, it means no issue
 for now. If the icon is grey, you might want to check whether you choose the
 same board for Vitis and Vivado.
 
@@ -104,7 +104,7 @@ on the block diagram. Select `PS-PL Configuration`. Then, select the
 5. Go back to the block diagram and click the `Run Connection Automation`. Select the `All Automation` at the left column.
 You need to manually map the HLS ports to the three AXI HP buses 1-to-1.
 Click `OK` to start connection automation.
-When it finished, you will see a completed block diagram. To check its correctness,
+When it finishes, you will see a completed block diagram. To check its correctness,
 click the `validation` (check icon) on the upper page. Below is the completed diagram. 
 
 ![alt text](figures/p2.png)
@@ -112,8 +112,8 @@ click the `validation` (check icon) on the upper page. Below is the completed di
 6. We finished building the block diagram, and now we will create a wrapper for it.
 Find the block diagram file under the design sources. Right click the
 design file (whatever you name it) and select `Create HDL Wrapper`.
-Choose `Let Vivado manage wrapper and auto-update` as option.
-click `OK` to start.
+Choose `Let Vivado manage wrapper and auto-update` option.
+Click `OK` to start.
 
 7. Finally, the last step. Click the `Generate Bitstream` under
 `PROGRAM AND DEBUG` division (at the lower left of the entire page).
