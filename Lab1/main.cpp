@@ -34,11 +34,11 @@ int main()
 
     // Expected value for MatC_tb
     // To make sure your optimizations in matrix_mul is not changing the functionality
-    for(int i = 0; i < K; i++) {
-        for(int j = 0; j < M; j++) {
+    for(int i = 0; i < M; i++) {
+        for(int j = 0; j < K; j++) {
             
             for(int p = 0; p < N; p++) {
-                MatC_expected[i][j] += MatA_tb[j][p] * MatB_tb[p][i];
+                MatC_expected[i][j] += MatA_tb[i][p] * MatB_tb[p][j];
             }
 
         }
