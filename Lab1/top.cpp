@@ -27,11 +27,11 @@ void matrix_mul( FIX_TYPE MatA_DRAM[M][N], FIX_TYPE MatB_DRAM[N][K], FIX_TYPE Ma
     }
 
     // Compute the matrix multiplication
-    for(int i = 0; i < K; i++) {
-        for(int j = 0; j < M; j++) {
+    for(int i = 0; i < M; i++) {
+        for(int j = 0; j < K; j++) {
             
             for(int p = 0; p < N; p++) {
-                MatC[i][j] += MatA[j][p] * MatB[p][i];
+                MatC[i][j] += MatA[i][p] * MatB[p][j];
             }
 
         }
