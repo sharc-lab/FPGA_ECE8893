@@ -2,7 +2,10 @@
 
 void matrix_mul( FIX_TYPE MatA_DRAM[M][N], FIX_TYPE MatB_DRAM[N][K], FIX_TYPE MatC_DRAM[M][K])
 {
-
+#pragma HLS interface m_axi port=MatA_DRAM offset=slave bundle=mem
+#pragma HLS interface m_axi port=MatB_DRAM offset=slave bundle=mem
+#pragma HLS interface m_axi port=MatC_DRAM offset=slave bundle=mem
+    
     FIX_TYPE MatA[M][N];
     FIX_TYPE MatB[N][K];
     FIX_TYPE MatC[M][K];
