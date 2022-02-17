@@ -107,7 +107,7 @@ For reference on Convolutional Layer in deep learning, refer [2]
 &nbsp;&nbsp;&nbsp;&nbsp;* Bonus:<br>
 ```
 You can go beyond the common methods and apply other innovative or interesting methods to further optimize latency.
-Extra points will be considered for innvoative and effective techniques (given the constraints specified are adhered to)
+Extra points will be considered for innvoative and effective techniques (given the constraints specified are adhered to).
 ```
 
 <h4>Files:</h4>
@@ -118,11 +118,13 @@ Extra points will be considered for innvoative and effective techniques (given t
 &nbsp;&nbsp;&nbsp;&nbsp;* sim -> testbench<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* conv.h -> contains defines and function declarations<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* utils.cpp -> contains useful functions for implementing tiled convolution<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* csim.out -> binary obtained after compilation that can be run to simulate the design
+
 
 <h4>Scripts (copy to src folder or create symbolic links):</h4>
 
-&nbsp;&nbsp;&nbsp;&nbsp;* `scripts/0_cmodel_sim_float.sh` -> run C simulation of the software-level implementation with floating point data type (faster)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* `scripts/1_cmodel_sim_fixp.sh` -> run C simulation of the software-level implementation with fixed point data type (slower)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* `scripts/2_hls_sim_float.sh` -> run C simulation of the hardware level implementation with floating point data type<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* `scripts/3_hls_sim_fixp.sh` -> run C simulation of the hardware level implementation with fixed point a type<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* `Run_hls_synth.tcl` -> to run Vitis HLS synthesis<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* `scripts/0_cmodel_sim_float.sh` -> Compile the software-level implementation with floating point data type (faster)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* `scripts/1_cmodel_sim_fixp.sh` -> Compile the software-level implementation with fixed point data type (slower)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* `scripts/2_hls_sim_float.sh` -> Compile the hardware level implementation with floating point data type<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* `scripts/3_hls_sim_fixp.sh` -> Compile the hardware level implementation with fixed point a type<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* `Run_hls_synth.tcl` -> Run Vitis HLS synthesis<br>
