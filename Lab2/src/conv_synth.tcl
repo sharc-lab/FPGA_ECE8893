@@ -1,17 +1,8 @@
 # TCL commands for batch-mode HLS
-open_project proj
-set_top tiled_conv
+open_project conv_hls
+set_top conv_3x3
 
-add_files conv.h
-add_files utils.cpp
 add_files conv_3x3.cpp
-add_files tiled_conv.cpp
-
-add_files -tb ./conv_layer_input_feature_map.bin
-add_files -tb ./conv_layer_weights.bin
-add_files -tb ./conv_layer_bias.bin
-add_files -tb ./conv_layer_output_feature_map.bin
-add_files -tb ./sim.cpp
 
 open_solution "solution1" -flow_target vivado
 set_part {xczu3eg-sbva484-1-e}
