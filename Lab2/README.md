@@ -125,6 +125,6 @@ Extra points will be considered for innvoative and effective techniques (given t
 
 &nbsp;&nbsp;&nbsp;&nbsp;* `0_cmodel_sim_float.sh` followed by `./csim.out`-> Compile and simulate the software-level implementation with floating point data type (faster)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* `1_cmodel_sim_fixp.sh` followed by `./csim.out`-> Compile and simulate the software-level implementation with fixed point data type (slower)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* `2_hls_sim_float.sh` followed by `./csim.out`-> Compile the simulate hardware level implementation with floating point data type<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* `3_hls_sim_fixp.sh` followed by `./csim.out` -> Compile the simulate hardware level implementation with fixed point a type<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* `2_hls_sim_float.sh` followed by `./csim.out`-> Compile and simulate hardware level implementation with floating point data type<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* `3_hls_sim_fixp.sh` followed by `./csim.out` -> Compile and simulate hardware level implementation with fixed point a type<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* `Run_hls_synth.tcl` followed by `./csim.out` -> Run Vitis HLS synthesis<br>
