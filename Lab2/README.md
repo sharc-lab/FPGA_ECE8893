@@ -106,7 +106,8 @@ For reference on Convolutional Layer in deep learning, refer [2]
 &nbsp;&nbsp;&nbsp;&nbsp;* If Lab Report submitted but not up to the mark or missing required items -> accordingly pts can be subtracted.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* Bonus:<br>
 ```
-Additionally innovative methods can be tried to optimize latency, extra points will be considered for innvoative and effective techniques.
+Additionally, innovative methods can be tried to optimize latency.
+Extra points will be considered for innvoative and effective techniques.
 ```
 
 <h4>Files:</h4>
