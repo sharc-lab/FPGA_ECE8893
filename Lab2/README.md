@@ -22,8 +22,9 @@ For reference on Convolutional Layer in deep learning, refer [2]
 
 &nbsp;&nbsp;&nbsp;&nbsp;Your code must pass the testbench.
 
-&nbsp;&nbsp;&nbsp;&nbsp;Note: Here, handling the border pixels correctly for padding is very important ( Refer to [2] ) as you would extend this concept for the hardware implementation in the next part.
- 
+```
+Note: Here, handling the border pixels correctly for padding is very important ( Refer to [2] ) as you would extend this concept for the hardware implementation in the next part.
+ ```
 <h4>Part B - Unoptimized but synthesizable tiled-convolution in HLS (30% Weightage):</h4>
 
 &nbsp;&nbsp;&nbsp;&nbsp;Implement the convolution layer as a synthesizable tiled convolution (Refer [1]).<br>
@@ -37,17 +38,21 @@ For reference on Convolutional Layer in deep learning, refer [2]
 
 &nbsp;&nbsp;&nbsp;&nbsp;You need to estimate how much of a speedup your optimized convolution code should hit to meet this overall speedup. Amdahl’s law in action!
 
-&nbsp;&nbsp;&nbsp;&nbsp;Note: This is the most important part of this lab.
- 
+```
+Note: This is the most important part of this lab. 
  ```
-&nbsp;&nbsp;&nbsp;&nbsp;This lab can take considerable time and experimentation compared to the previous one so be sure to take a look at it early ahead and schedule time for it accordingly.
- ```
+
+
 &nbsp;&nbsp;&nbsp;&nbsp;* Sugested sequence of code development -
 &nbsp;&nbsp;&nbsp;&nbsp;- The software-level C model
 &nbsp;&nbsp;&nbsp;&nbsp;- Tiled implementation: tiled conv + conv_3x3 together
 &nbsp;&nbsp;&nbsp;&nbsp;- Optimize conv_3x3
 &nbsp;&nbsp;&nbsp;&nbsp;- Optimize tiled_conv
 &nbsp;&nbsp;&nbsp;&nbsp;* Before running synthesis, always simulate the whole layer first, make sure it passes and only then synthesize
+
+```
+Note: This lab can take considerable time and experimentation compared to the previous one so be sure to take a look at it early ahead and schedule time for it accordingly.
+```
 
 <h4>Bonus</h4>
 
