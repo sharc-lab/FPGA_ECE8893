@@ -29,9 +29,7 @@ For reference on Convolutional Layer in deep learning, refer [2]
 &nbsp;&nbsp;&nbsp;&nbsp;Implement the convolution layer as a synthesizable tiled convolution (Refer [1]).<br>
 &nbsp;&nbsp;&nbsp;&nbsp;a) Implement the convolution for a single tile in conv_3x3.cpp<br>
 &nbsp;&nbsp;&nbsp;&nbsp;b) Implement the complete tiled convolution in tiled_conv.cpp<br>
-
 &nbsp;&nbsp;&nbsp;&nbsp;There are functions available utils.cpp to assist with this.
- 
 
 <h4>Part C - Optimized and (synthesizable) tiled-convolution (40% Weightage):</h4>
 
@@ -43,6 +41,14 @@ For reference on Convolutional Layer in deep learning, refer [2]
  
 &nbsp;&nbsp;&nbsp;&nbsp;This lab can take considerable time and experimentation compared to the previous one so be sure to take a look at it early ahead and schedule time for it accordingly.
  
+
+&nbsp;&nbsp;&nbsp;&nbsp;Before running synthesis, always simulate the whole layer first, make sure it passes and only then synthesize
+&nbsp;&nbsp;&nbsp;&nbsp;So the sequence of code development should be -
+&nbsp;&nbsp;&nbsp;&nbsp;C model
+&nbsp;&nbsp;&nbsp;&nbsp;tiled conv + conv_3x3 together
+&nbsp;&nbsp;&nbsp;&nbsp;optimize conv_3x3
+&nbsp;&nbsp;&nbsp;&nbsp;optimize tiled_conv
+
 <h4>Bonus</h4>
 If the overall latency is less than 670ms, 1 extra point.
 If the overall latency is less than 630ms, total 2 extra points.
