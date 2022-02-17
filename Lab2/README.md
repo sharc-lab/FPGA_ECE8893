@@ -50,6 +50,15 @@ Note: This is the most important part of this lab.
  ```
 ---
 
+
+<h4>Bonus!</h4>
+Up for the challenge? <br>
+If the overall latency is less than 670ms, 1 extra point.<br>
+If the overall latency is less than 630ms, total 2 extra points.<br>
+If the overall latency is less than 600ms, total 3 extra points.<br>
+
+---
+
 &nbsp;&nbsp;&nbsp;&nbsp;Sugested sequence of code development:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* The software-level C model<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* Tiled implementation: tiled_conv + conv_3x3 together<br>
@@ -62,11 +71,6 @@ Note: This lab can take considerable time and experimentation compared to the pr
 so be sure to take a look at it early ahead and schedule time for it accordingly.
 ```
 
-<h4>Bonus!</h4>
-Up for the challenge? <br>
-If the overall latency is less than 670ms, 1 extra point.<br>
-If the overall latency is less than 630ms, total 2 extra points.<br>
-If the overall latency is less than 600ms, total 3 extra points.<br>
 
 ---
 
