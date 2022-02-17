@@ -15,6 +15,8 @@ Padding 		- 	1
 Output Feature Map      - 	(64, 184, 320)
 ```
 For reference on Convolutional Layer in deep learning, refer [2] 
+
+ ---
  
 <h4>Part A - C model implementation (30% Weightage):</h4>
 
@@ -61,7 +63,7 @@ so be sure to take a look at it early ahead and schedule time for it accordingly
 ```
 
 <h4>Bonus!</h4>
-Up for the challenge?
+Up for the challenge? <br>
 If the overall latency is less than 670ms, 1 extra point.<br>
 If the overall latency is less than 630ms, total 2 extra points.<br>
 If the overall latency is less than 600ms, total 3 extra points.<br>
@@ -78,7 +80,7 @@ If the overall latency is less than 600ms, total 3 extra points.<br>
  
 <h4>Some constraints to follow:</h4>
 
-&nbsp;&nbsp;&nbsp;&nbsp;* For Part B & Part C, buffer dimensions should not be changed except for minor increments in input buffer height and width for handling the border features.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* For Part B & Part C, buffer dimensions should not be changed except for minor increments in input buffer height and width for handling the border pixels.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* Tile or Tile block dimensions should not be changed.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* Input or output feature map dimensions should not be changed.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* Clock period should be fixed at 10ns.<br>
@@ -87,19 +89,19 @@ If the overall latency is less than 600ms, total 3 extra points.<br>
 <h4>Targets:</h4>
 
 &nbsp;&nbsp;&nbsp;&nbsp;* Part A: Functional correctness. Test bench must pass.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* Part B: Latency of ~2.24 billion cycles (i.e. ~22.2 seconds) for the entire layer.<br>
-Part C: Overall latency should be less than 740ms (i.e. 30x speedup) 
-&nbsp;&nbsp;&nbsp;&nbsp;* Part C: Latency of <93.5 million cycles (i.e <740 ms) for the entire layer.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* Part B: Latency of `~22.2 seconds` for the entire layer.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* Part C: Latency `< 740 ms` for the entire layer(i.e. 30x speedup).<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* Resource utilization to be under 100% in both Part B and Part C.<br>
  
 <h4>What to submit:</h4>
 
 &nbsp;&nbsp;&nbsp;&nbsp;* Part A - `src/model_conv.cpp`.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* Part B - `src/conv_3x3.cpp`.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* Part B - `src/tiled_conv.cpp`.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* Part B. a) `src/conv_3x3.cpp`.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* Part B. b) `src/tiled_conv.cpp`.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* Part C. a) `src/utils.cpp`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* Part C. b) optimized `src/conv_3x3.cpp`. HLS report.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* Part C. c) optimized `src/tiled_conv.cpp`. HLS report.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* Lab Report
 
 <h4>Lab Report:</h4>
 
@@ -128,14 +130,10 @@ Part C: Overall latency should be less than 740ms (i.e. 30x speedup)
 
 &nbsp;&nbsp;&nbsp;&nbsp;* Part A - C model implementation -> 3pts<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* Part B - Unoptimized by synthesizable tiled-convolution -> 3pts<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* Part C - Optimized and (synthesizable) tile-convolution -> 4pts<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* Part C - Optimized and (synthesizable) tiled-convolution -> 4pts<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* If Lab Report not submitted -> -6pts<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* If Lab Report submitted but not up to the mark or missing required items -> accordingly pts can be subtracted.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* Bonus:<br>
-```
-You can go beyond the common methods and apply other innovative or interesting methods to further optimize latency.
-Extra points will be considered for innvoative and effective techniques (given the constraints specified are adhered to).
-```
+&nbsp;&nbsp;&nbsp;&nbsp;* Bonus points can be obtained as described in the 'Bonus' section.
 
 <h4>Files:</h4>
 
@@ -148,10 +146,11 @@ Extra points will be considered for innvoative and effective techniques (given t
 &nbsp;&nbsp;&nbsp;&nbsp;* csim.out -> binary obtained after compilation that can be run to simulate the design
 
 
-<h4>Scripts (copy to src folder or create symbolic links):</h4>
+<h4>Scripts:</h4>
 
 &nbsp;&nbsp;&nbsp;&nbsp;* `0_cmodel_sim_float.sh` followed by `./csim.out`-> Compile and simulate the software-level implementation with floating point data type (faster)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* `1_cmodel_sim_fixp.sh` followed by `./csim.out`-> Compile and simulate the software-level implementation with fixed point data type (slower)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* `2_hls_sim_float.sh` followed by `./csim.out`-> Compile and simulate hardware level implementation with floating point data type<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* `3_hls_sim_fixp.sh` followed by `./csim.out` -> Compile and simulate hardware level implementation with fixed point a type<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* `Run_hls_synth.tcl` followed by `./csim.out` -> Run Vitis HLS synthesis<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* `conv_synth.tcl` -> Run Vitis HLS synthesis on conv_3x3<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* `layer_synth.tcl` -> Run Vitis HLS synthesis on tiled_conv<br>
