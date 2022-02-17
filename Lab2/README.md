@@ -39,20 +39,21 @@ For reference on Convolutional Layer in deep learning, refer [2]
 
 &nbsp;&nbsp;&nbsp;&nbsp;Note: This is the most important part of this lab.
  
+ ```
 &nbsp;&nbsp;&nbsp;&nbsp;This lab can take considerable time and experimentation compared to the previous one so be sure to take a look at it early ahead and schedule time for it accordingly.
- 
-
-&nbsp;&nbsp;&nbsp;&nbsp;Before running synthesis, always simulate the whole layer first, make sure it passes and only then synthesize
-&nbsp;&nbsp;&nbsp;&nbsp;So the sequence of code development should be -
-&nbsp;&nbsp;&nbsp;&nbsp;C model
-&nbsp;&nbsp;&nbsp;&nbsp;tiled conv + conv_3x3 together
-&nbsp;&nbsp;&nbsp;&nbsp;optimize conv_3x3
-&nbsp;&nbsp;&nbsp;&nbsp;optimize tiled_conv
+ ```
+&nbsp;&nbsp;&nbsp;&nbsp;* Sugested sequence of code development -
+&nbsp;&nbsp;&nbsp;&nbsp;- The software-level C model
+&nbsp;&nbsp;&nbsp;&nbsp;- Tiled implementation: tiled conv + conv_3x3 together
+&nbsp;&nbsp;&nbsp;&nbsp;- Optimize conv_3x3
+&nbsp;&nbsp;&nbsp;&nbsp;- Optimize tiled_conv
+&nbsp;&nbsp;&nbsp;&nbsp;* Before running synthesis, always simulate the whole layer first, make sure it passes and only then synthesize
 
 <h4>Bonus</h4>
-If the overall latency is less than 670ms, 1 extra point.
-If the overall latency is less than 630ms, total 2 extra points.
-If the overall latency is less than 600ms, total 3 extra points.
+
+If the overall latency is less than 670ms, 1 extra point.<br>
+If the overall latency is less than 630ms, total 2 extra points.<br>
+If the overall latency is less than 600ms, total 3 extra points.<br>
 
 
 <h4>References:</h4>
