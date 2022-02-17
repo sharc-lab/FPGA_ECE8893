@@ -43,12 +43,19 @@ For reference on Convolutional Layer in deep learning, refer [2]
  
 &nbsp;&nbsp;&nbsp;&nbsp;This lab can take considerable time and experimentation compared to the previous one so be sure to take a look at it early ahead and schedule time for it accordingly.
  
+<h4>Bonus</h4>
+If the overall latency is less than 670ms, 1 extra point.
+If the overall latency is less than 630ms, total 2 extra points.
+If the overall latency is less than 600ms, total 3 extra points.
+
+
 <h4>References:</h4>
 
 &nbsp;&nbsp;&nbsp;&nbsp;[1] Lab 2 Reference Article:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;https://sharc-knowledgebase.netlify.app/articles/cnn/tiling-based_convolution_for_hls/<br>
 &nbsp;&nbsp;&nbsp;&nbsp;[2] Conv Layer Reference:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;https://stanford.edu/~shervine/teaching/cs-230/cheatsheet-convolutional-neural-networks
+ 
  
 <h4>Some constraints to follow:</h4>
 
@@ -61,8 +68,9 @@ For reference on Convolutional Layer in deep learning, refer [2]
 <h4>Targets:</h4>
 
 &nbsp;&nbsp;&nbsp;&nbsp;* Part A: Functional correctness. Test bench must pass.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* Part B: Latency of ~2.24 billion cycles (i.e. ~22.4 seconds) for the entire layer.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* Part C: Latency of <93.5 million cycles (i.e <935 ms) for the entire layer.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* Part B: Latency of ~2.24 billion cycles (i.e. ~22.2 seconds) for the entire layer.<br>
+Part C: Overall latency should be less than 740ms (i.e. 30x speedup) 
+&nbsp;&nbsp;&nbsp;&nbsp;* Part C: Latency of <93.5 million cycles (i.e <740 ms) for the entire layer.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* Resource utilization to be under 100% in both Part B and Part C.<br>
  
 <h4>What to submit:</h4>
