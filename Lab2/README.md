@@ -41,7 +41,7 @@ as you would extend this concept for the hardware implementation in the next par
 
 <h4>Part C - Optimized and (synthesizable) tiled-convolution (40% Weightage):</h4>
 
-&nbsp;&nbsp;&nbsp;&nbsp;Apply suitable HLS optimizations to optimize the latency while keeping resource utilization under 100%. The target is to achieve an overall speedup of `at least 30x`, which would correspond to a `latency of < 740ms`
+&nbsp;&nbsp;&nbsp;&nbsp;Apply suitable HLS optimizations to optimize the latency while keeping resource utilization under 100%. The target is to achieve an overall `latency of < 740ms` (speedup of at least `30x`)
 
 &nbsp;&nbsp;&nbsp;&nbsp;You need to estimate how much of a speedup your optimized convolution code should hit to meet this overall speedup. Amdahl’s law in action!
 
