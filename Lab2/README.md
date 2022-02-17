@@ -6,14 +6,14 @@
 <h3>Problem Statement:</h3>
 
 Implement the following convolutional layer (sample taken from the ResNet50 Model, refer [1]):
-
+```
 Kernel Size 		- 	3x3
 Filter Size	 	- 	64
 Input Feature Map 	- 	(64, 184, 320) 
 Stride 			- 	1
 Padding 		- 	1
-Output Feature Map - 	(64, 184, 320)
-
+Output Feature Map      - 	(64, 184, 320)
+```
 For reference on Convolutional Layer in deep learning, refer [2] 
  
 <h4>Part A - C model implementation (30% Weightage):</h4>
