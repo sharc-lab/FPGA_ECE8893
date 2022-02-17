@@ -137,10 +137,10 @@ If the overall latency is less than 600ms, total 3 extra points.<br>
 
 <h4>Files:</h4>
 
-&nbsp;&nbsp;&nbsp;&nbsp;* tiled_conv -> implement complete tiled convolution<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* conv_3x3 -> implement convolution computation<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* model_conv -> implement convolution layer at software level (no hardware level features involved)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* sim -> testbench<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* tiled_conv.cpp -> implement complete tiled convolution<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* conv_3x3.cpp -> implement convolution computation<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* model_conv.cpp -> implement convolution layer at software level (no hardware level features involved)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* sim.cpp -> testbench<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* conv.h -> contains defines and function declarations<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* utils.cpp -> contains useful functions for implementing tiled convolution<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* csim.out -> binary obtained after compilation that can be run to simulate the design
