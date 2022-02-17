@@ -1,7 +1,7 @@
 <h1>Parallel Programming for FPGAs</h1>
-<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ECE 8893 - FPG</h3>
-<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Spring 2022</h3>
-<h2>Lab2: Tiling-based Convolution in HLS</h2>
+<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ECE 8893 - FPG</h3>
+<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Spring 2022</h3>
+<h2>&nbsp;&nbsp;Lab2: Tiling-based Convolution in HLS</h2>
 
 <h3>Problem Statement:</h3>
 
@@ -23,7 +23,8 @@ For reference on Convolutional Layer in deep learning, refer [2]
 &nbsp;&nbsp;&nbsp;&nbsp;Your code must pass the testbench.
 
 ```
-Note: Here, handling the border pixels correctly for padding is very important ( Refer to [2] ) as you would extend this concept for the hardware implementation in the next part.
+Note: Here, handling the border pixels correctly for padding is very important ( Refer to [2] ) 
+as you would extend this concept for the hardware implementation in the next part.
  ```
 <h4>Part B - Unoptimized but synthesizable tiled-convolution in HLS (30% Weightage):</h4>
 
@@ -43,15 +44,16 @@ Note: This is the most important part of this lab.
  ```
 
 
-&nbsp;&nbsp;&nbsp;&nbsp;* Sugested sequence of code development -
-&nbsp;&nbsp;&nbsp;&nbsp;- The software-level C model
-&nbsp;&nbsp;&nbsp;&nbsp;- Tiled implementation: tiled conv + conv_3x3 together
-&nbsp;&nbsp;&nbsp;&nbsp;- Optimize conv_3x3
-&nbsp;&nbsp;&nbsp;&nbsp;- Optimize tiled_conv
+&nbsp;&nbsp;&nbsp;&nbsp;Sugested sequence of code development:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* The software-level C model
+&nbsp;&nbsp;&nbsp;&nbsp;* Tiled implementation: tiled conv + conv_3x3 together
+&nbsp;&nbsp;&nbsp;&nbsp;* Optimize conv_3x3
+&nbsp;&nbsp;&nbsp;&nbsp;* Optimize tiled_conv
 &nbsp;&nbsp;&nbsp;&nbsp;* Before running synthesis, always simulate the whole layer first, make sure it passes and only then synthesize
 
 ```
-Note: This lab can take considerable time and experimentation compared to the previous one so be sure to take a look at it early ahead and schedule time for it accordingly.
+Note: This lab can take considerable time and experimentation compared to the previous one 
+so be sure to take a look at it early ahead and schedule time for it accordingly.
 ```
 
 <h4>Bonus</h4>
