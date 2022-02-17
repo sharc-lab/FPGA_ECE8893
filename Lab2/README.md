@@ -119,7 +119,6 @@ Extra points will be considered for innvoative and effective techniques (given t
 &nbsp;&nbsp;&nbsp;&nbsp;* conv.h -> contains defines and function declarations<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* utils.cpp -> contains useful functions for implementing tiled convolution<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* csim.out -> binary obtained after compilation that can be run to simulate the design
-&nbsp;&nbsp;&nbsp;&nbsp;* Makefile -> compilation opitons
 
 
 <h4>Scripts (copy to src folder or create symbolic links):</h4>
