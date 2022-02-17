@@ -18,7 +18,7 @@ For reference on Convolutional Layer in deep learning, refer [2]
  
 <h4>Part A - C model implementation (30% Weightage):</h4>
 
-&nbsp;&nbsp;&nbsp;&nbsp;Implement the convolution at the software-level (no hardware level features). This is to ensure functional correctness. 
+&nbsp;&nbsp;&nbsp;&nbsp;Implement the convolution at the software-level (no hardware level features). This is to ensure functional correctness and to act as a debugging reference for implementing tiling-based convolution.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Your code must pass the testbench.
 
