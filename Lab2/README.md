@@ -85,7 +85,7 @@ so be sure to take a look at it early ahead and schedule time for it accordingly
 <h4>Some constraints to follow:</h4>
 
 &nbsp;&nbsp;&nbsp;&nbsp;* For Part B & Part C, buffer dimensions should not be changed except for minor increments in input buffer height and width for handling the border pixels.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* Tile or Tile block dimensions should not be changed.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* Tile slice or Tile cube dimensions should not be changed.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* Input or output feature map dimensions should not be changed.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* Clock period should be fixed at 10ns.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* The data precision should not be changed for latency calculation (can be explored).<br>
