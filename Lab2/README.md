@@ -55,7 +55,7 @@ Note: This is the most important part of this lab.
 &nbsp;&nbsp;&nbsp;&nbsp;* Tiled implementation: tiled_conv + conv_3x3 together<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* Optimize conv_3x3<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* Optimize tiled_conv<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Before running synthesis, always simulate the whole layer first, make sure it passes and only then synthesize<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Before running synthesis, always simulate the whole layer first, make sure it passes, then synthesize<br>
 
 ```
 Note: This lab can take considerable time and experimentation compared to the previous one 
