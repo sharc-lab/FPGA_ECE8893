@@ -124,8 +124,8 @@ Extra points will be considered for innvoative and effective techniques (given t
 
 <h4>Scripts (copy to src folder or create symbolic links):</h4>
 
-&nbsp;&nbsp;&nbsp;&nbsp;* `scripts/0_cmodel_sim_float.sh` -> Compile the software-level implementation with floating point data type (faster)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* `scripts/1_cmodel_sim_fixp.sh` -> Compile the software-level implementation with fixed point data type (slower)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* `scripts/2_hls_sim_float.sh` -> Compile the hardware level implementation with floating point data type<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* `scripts/3_hls_sim_fixp.sh` -> Compile the hardware level implementation with fixed point a type<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* `0_cmodel_sim_float.sh` -> Compile the software-level implementation with floating point data type (faster)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* `1_cmodel_sim_fixp.sh` -> Compile the software-level implementation with fixed point data type (slower)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* `2_hls_sim_float.sh` -> Compile the hardware level implementation with floating point data type<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* `3_hls_sim_fixp.sh` -> Compile the hardware level implementation with fixed point a type<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* `Run_hls_synth.tcl` -> Run Vitis HLS synthesis<br>
