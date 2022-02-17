@@ -26,42 +26,47 @@ For reference on Convolutional Layer in deep learning, refer [2]
 Note: Here, handling the border pixels correctly for padding is very important ( Refer to [2] ) 
 as you would extend this concept for the hardware implementation in the next part.
  ```
+---
+
 <h4>Part B - Unoptimized but synthesizable tiled-convolution in HLS (30% Weightage):</h4>
 
 &nbsp;&nbsp;&nbsp;&nbsp;Implement the convolution layer as a synthesizable tiled convolution (Refer [1]).<br>
 &nbsp;&nbsp;&nbsp;&nbsp;a) Implement the convolution for a single tile in conv_3x3.cpp<br>
 &nbsp;&nbsp;&nbsp;&nbsp;b) Implement the complete tiled convolution in tiled_conv.cpp<br>
-&nbsp;&nbsp;&nbsp;&nbsp;There are functions available utils.cpp to assist with this.
+&nbsp;&nbsp;&nbsp;&nbsp;There are functions available in utils.cpp to assist with this.
+
+---
 
 <h4>Part C - Optimized and (synthesizable) tiled-convolution (40% Weightage):</h4>
 
-&nbsp;&nbsp;&nbsp;&nbsp;Apply suitable HLS optimizations to optimize the latency while keeping resource utilization under 100%. The target is to achieve an overall speedup of at least 24x.
+&nbsp;&nbsp;&nbsp;&nbsp;Apply suitable HLS optimizations to optimize the latency while keeping resource utilization under 100%. The target is to achieve an overall speedup of at least 30x.
 
 &nbsp;&nbsp;&nbsp;&nbsp;You need to estimate how much of a speedup your optimized convolution code should hit to meet this overall speedup. Amdahl’s law in action!
 
 ```
 Note: This is the most important part of this lab. 
  ```
-
+---
 
 &nbsp;&nbsp;&nbsp;&nbsp;Sugested sequence of code development:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* The software-level C model
-&nbsp;&nbsp;&nbsp;&nbsp;* Tiled implementation: tiled conv + conv_3x3 together
-&nbsp;&nbsp;&nbsp;&nbsp;* Optimize conv_3x3
-&nbsp;&nbsp;&nbsp;&nbsp;* Optimize tiled_conv
-&nbsp;&nbsp;&nbsp;&nbsp;* Before running synthesis, always simulate the whole layer first, make sure it passes and only then synthesize
+&nbsp;&nbsp;&nbsp;&nbsp;* The software-level C model<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* Tiled implementation: tiled_conv + conv_3x3 together<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* Optimize conv_3x3<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* Optimize tiled_conv<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Before running synthesis, always simulate the whole layer first, make sure it passes and only then synthesize<br>
 
 ```
 Note: This lab can take considerable time and experimentation compared to the previous one 
 so be sure to take a look at it early ahead and schedule time for it accordingly.
 ```
 
-<h4>Bonus</h4>
-
+<h4>Bonus!</h4>
+Up for the challenge?
 If the overall latency is less than 670ms, 1 extra point.<br>
 If the overall latency is less than 630ms, total 2 extra points.<br>
 If the overall latency is less than 600ms, total 3 extra points.<br>
 
+---
 
 <h4>References:</h4>
 
