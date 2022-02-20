@@ -1,6 +1,6 @@
 <h3>Sample Code and Report 1:</h3>
 
-Submission by: Parima Mehta
+Submission by: Parima Mehta <br>
 Latency obtained: 1.14ms &nbsp;&nbsp;&nbsp;&nbsp;BRAM:426&nbsp;&nbsp;&nbsp;&nbsp;DSP:64&nbsp;&nbsp;&nbsp;&nbsp;FF:20580&nbsp;&nbsp;&nbsp;&nbsp;LUT:48251<br>
 Some good points to note:<br>
 -Does not completely unroll any loop, instead lowers latency by making best use of loop tiling.<br>
