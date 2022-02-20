@@ -12,4 +12,4 @@ Some good points to note:<br>
 Latency obtained: 1.73ms &nbsp;&nbsp;&nbsp;&nbsp;BRAM:268&nbsp;&nbsp;&nbsp;&nbsp;DSP:47&nbsp;&nbsp;&nbsp;&nbsp;FF:3239&nbsp;&nbsp;&nbsp;&nbsp;LUT:13524<br>
 Some good points to note:<br>
 -Does not completely unroll loops <br>
--Low latency while with focus on minimal resource usage <br>
+-Low latency with focus on minimal resource usage <br>
