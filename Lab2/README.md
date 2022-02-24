@@ -53,9 +53,11 @@ Note: This is the most important part of this lab.
 
 <h4>Bonus!</h4>
 Up for the challenge? <br>
-If the overall latency achieved is less than 670ms, 1 extra point.<br>
-If the overall latency achieved is less than 630ms, total 2 extra points.<br>
-If the overall latency achieved is less than 600ms, total 3 extra points.<br>
+- If the overall latency achieved is less than 600ms, 1 extra point. <br>
+- If the overall latency achieved is less than 450ms, total 2 extra points. <br>
+- To add a little spice to this, if your latency is among the Top 5 in the class, you get 1 additional point. <br>
+- If you're in the Top 10 but not in the Top 5, you get 0.5 additional point. <br>
+(i.e. you can score a maximum of 13 points in this lab!!) <br>
 
 ---
 
