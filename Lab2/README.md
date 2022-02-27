@@ -114,6 +114,32 @@ For Part A, upload your model_conv.cpp
 For Part B, upload Part_B.tar.gz which contains PartB. a), b) and c) without optimizations.
 For Part C, upload Part_C.tar.gz which contains PartC. a), b) and c) with optimizations & pragmas
 ```
+
+<h4>Reference Data:</h4>
+
+&nbsp;&nbsp;&nbsp;&nbsp; * Input to the convolution:<br>
+&nbsp;&nbsp;&nbsp;&nbsp; `bin/conv_layer_input_feature_map.bin`<br>
+&nbsp;&nbsp;&nbsp;&nbsp; * Golden output of the convolution (for comparing results with):<br>
+&nbsp;&nbsp;&nbsp;&nbsp; `bin/conv_layer_output_feature_map.bin`<br>
+&nbsp;&nbsp;&nbsp;&nbsp; * Weights for the convolution layer:<br>
+&nbsp;&nbsp;&nbsp;&nbsp; `bin/conv_layer_weights.bin`<br>
+&nbsp;&nbsp;&nbsp;&nbsp; * Biases for the convolution layer:<br>
+&nbsp;&nbsp;&nbsp;&nbsp; `bin/conv_layer_bias.bin`
+
+&nbsp;&nbsp;&nbsp;&nbsp;These .bin files are generated from Pytorch model. This is the reason why MSE is being used in the testbench for checking correctness (There is a variation that arises due to the difference in the way floating points are handled in C and Python). So the MSE should not be exactly 0.
+ 
+
+
+<h4>Grading (Refer 'What to submit'):</h4>
+
+&nbsp;&nbsp;&nbsp;&nbsp;* Part A - C model implementation -> 3pts<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* Part B - Unoptimized by synthesizable tiled-convolution -> 3pts<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* Part C - Optimized and (synthesizable) tiled-convolution -> 4pts<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* If Lab Report not submitted -> -6pts<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* If Lab Report submitted but not up to the mark or missing required items -> accordingly pts can be subtracted.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* Bonus points can be obtained as described in the 'Bonus' section.
+
+
 <h4>What to include in the Lab Report:</h4>
 
 &nbsp;&nbsp;&nbsp;&nbsp;Part A (-1pts):
@@ -140,29 +166,6 @@ Note: For these above questions, a brief and precise answer in one or two senten
 ```
 Note: For Part C. 2) , you may use 10 - 20 sentences to effectively convey your experimentation, observations, and conclusions.
 ```
-<h4>Reference Data:</h4>
-
-&nbsp;&nbsp;&nbsp;&nbsp; * Input to the convolution:<br>
-&nbsp;&nbsp;&nbsp;&nbsp; `bin/conv_layer_input_feature_map.bin`<br>
-&nbsp;&nbsp;&nbsp;&nbsp; * Golden output of the convolution (for comparing results with):<br>
-&nbsp;&nbsp;&nbsp;&nbsp; `bin/conv_layer_output_feature_map.bin`<br>
-&nbsp;&nbsp;&nbsp;&nbsp; * Weights for the convolution layer:<br>
-&nbsp;&nbsp;&nbsp;&nbsp; `bin/conv_layer_weights.bin`<br>
-&nbsp;&nbsp;&nbsp;&nbsp; * Biases for the convolution layer:<br>
-&nbsp;&nbsp;&nbsp;&nbsp; `bin/conv_layer_bias.bin`
-
-&nbsp;&nbsp;&nbsp;&nbsp;These .bin files are generated from Pytorch model. This is the reason why MSE is being used in the testbench for checking correctness (There is a variation that arises due to the difference in the way floating points are handled in C and Python). So the MSE should not be exactly 0.
- 
-
-
-<h4>Grading (Refer 'What to submit'):</h4>
-
-&nbsp;&nbsp;&nbsp;&nbsp;* Part A - C model implementation -> 3pts<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* Part B - Unoptimized by synthesizable tiled-convolution -> 3pts<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* Part C - Optimized and (synthesizable) tiled-convolution -> 4pts<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* If Lab Report not submitted -> -6pts<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* If Lab Report submitted but not up to the mark or missing required items -> accordingly pts can be subtracted.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* Bonus points can be obtained as described in the 'Bonus' section.
 
 <h4>Files:</h4>
 
