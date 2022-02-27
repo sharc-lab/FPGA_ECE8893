@@ -102,8 +102,9 @@ so be sure to take a look at it early ahead and schedule time for it accordingly
 <h4>What to submit:</h4>
 
 &nbsp;&nbsp;&nbsp;&nbsp;* Part A - `src/model_conv.cpp`.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* Part B. a) `src/conv_3x3.cpp`.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* Part B. b) `src/tiled_conv.cpp`.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* Part B. a) `src/utils.cpp`.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* Part B. b) `src/conv_3x3.cpp`.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* Part B. c) `src/tiled_conv.cpp`.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* Part C. a) `src/utils.cpp`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* Part C. b) optimized `src/conv_3x3.cpp`. HLS report.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* Part C. c) optimized `src/tiled_conv.cpp`. HLS report.<br>
