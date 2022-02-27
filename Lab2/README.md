@@ -111,17 +111,35 @@ so be sure to take a look at it early ahead and schedule time for it accordingly
 &nbsp;&nbsp;&nbsp;&nbsp;* Lab Report <br>
 ```
 For Part A, upload your model_conv.cpp
-For Part B, upload Part_B.tar.gz which contains PartB. a), b) and c) without optimization pragmas
-For Part C, upload Part_C.tar.gz which contains PartC. a), b) and c) with optimization pragmas
+For Part B, upload Part_B.tar.gz which contains PartB. a), b) and c) without optimizations.
+For Part C, upload Part_C.tar.gz which contains PartC. a), b) and c) with optimizations & pragmas
 ```
-<h4>Lab Report:</h4>
+<h4>What to include in the Lab Report:</h4>
 
-&nbsp;&nbsp;&nbsp;&nbsp;* Part C. a) single tile convolution latency obtained, resource utilization, techniques applied.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* Part C. b) entire layer latency obtained, resource utilization, techniques applied.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* Explorations / Observations for single tile convolution optimization.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* Explorations / Observations for entire layer convolution optimization.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* All code should compile and pass testbench.<br>
- 
+&nbsp;&nbsp;&nbsp;&nbsp;Part A (-1pts):
+    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1) How did you handle the border condition related to padding? 
+    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2) What is the MSE obtained (floating-point simulation)? 
+    
+&nbsp;&nbsp;&nbsp;&nbsp;Part B (-1pts):
+    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1) What is the MSE obtained (floating-point simulation)? 
+    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2) What is the latency and utilization (of each resource) you obtained after synthesis (for both single tile case and for the entire layer)? 
+    
+```
+Note: For these above questions, a brief and precise answer in one or two sentences is enough. For utilization mention resource count.
+```
+&nbsp;&nbsp;&nbsp;&nbsp;Part C (-4pts):
+    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1) A table indicating each optimization tried and corresponding latency, speedup, and utilization (of each resource) obtained. 
+    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2) A brief description of the experimentation and observations from the exploration. 
+    
+```
+Note: For Part C. 2) , you may use 10 - 20 sentences to effectively convey your experimentation, observations, and conclusions.
+```
 <h4>Reference Data:</h4>
 
 &nbsp;&nbsp;&nbsp;&nbsp; * Input to the convolution:<br>
