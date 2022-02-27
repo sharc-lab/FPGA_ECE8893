@@ -108,8 +108,12 @@ so be sure to take a look at it early ahead and schedule time for it accordingly
 &nbsp;&nbsp;&nbsp;&nbsp;* Part C. a) `src/utils.cpp`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* Part C. b) optimized `src/conv_3x3.cpp`. HLS report.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* Part C. c) optimized `src/tiled_conv.cpp`. HLS report.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* Lab Report
-
+&nbsp;&nbsp;&nbsp;&nbsp;* Lab Report <br>
+```
+For Part A, upload your model_conv.cpp
+For Part B, upload Part_B.tar.gz which contains PartB. a), b) and c) without optimization pragmas
+For Part C, upload Part_C.tar.gz which contains PartC. a), b) and c) with optimization pragmas
+```
 <h4>Lab Report:</h4>
 
 &nbsp;&nbsp;&nbsp;&nbsp;* Part C. a) single tile convolution latency obtained, resource utilization, techniques applied.<br>
