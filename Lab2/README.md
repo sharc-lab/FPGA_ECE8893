@@ -95,7 +95,7 @@ so be sure to take a look at it early ahead and schedule time for it accordingly
 <h4>Targets:</h4>
 
 &nbsp;&nbsp;&nbsp;&nbsp;* Part A: Functional correctness. Test bench must pass.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* Part B: Latency of `~22.2 seconds` for the entire layer.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* Part B: Latency of `~22.2 seconds` for the entire layer (This is just a reference for the kind of latency expected and not a target as such).<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* Part C: Latency `< 740 ms` for the entire layer(i.e. 30x speedup).<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* Resource utilization to be under 100% in both Part B and Part C.<br>
  
