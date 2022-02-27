@@ -135,7 +135,7 @@ For Part C, upload Part_C.tar.gz which contains PartC. a), b) and c) with optimi
 &nbsp;&nbsp;&nbsp;&nbsp;* Part B - Unoptimized by synthesizable tiled-convolution -> 3pts<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* Part C - Optimized and (synthesizable) tiled-convolution -> 4pts<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* If Lab Report not submitted -> -6pts<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* If Lab Report submitted but not up to the mark or missing required items -> accordingly pts can be subtracted.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* If Lab Report submitted but not up to the mark or missing required items -> accordingly pts can be subtracted (Refer 'What to include in the Lab Report' below).<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* Bonus points can be obtained as described in the 'Bonus' section.
 
 
