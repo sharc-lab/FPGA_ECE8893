@@ -105,9 +105,10 @@ so be sure to take a look at it early ahead and schedule time for it accordingly
 &nbsp;&nbsp;&nbsp;&nbsp;* Part B. a) `src/utils.cpp`.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* Part B. b) `src/conv_3x3.cpp`.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* Part B. c) `src/tiled_conv.cpp`.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;* Part C. a) `src/utils.cpp`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* Part C. a) `src/utils.cpp`.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* Part C. b) optimized `src/conv_3x3.cpp`. HLS report.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;* Part C. c) optimized `src/tiled_conv.cpp`. HLS report.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* Part C. d) `src/conv.h`. <br>
 &nbsp;&nbsp;&nbsp;&nbsp;* Lab Report <br>
 ```
 For Part A, upload your model_conv.cpp
