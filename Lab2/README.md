@@ -113,7 +113,7 @@ so be sure to take a look at it early ahead and schedule time for it accordingly
 ```
 For Part A, upload your model_conv.cpp
 For Part B, upload Part_B.tar.gz which contains PartB. a), b) and c) without optimizations.
-For Part C, upload Part_C.tar.gz which contains PartC. a), b) and c) with optimizations & pragmas
+For Part C, upload Part_C.tar.gz which contains PartC. a), b), c) and d) with optimizations & pragmas
 ```
 <h4>Reference Data:</h4>
 
