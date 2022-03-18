@@ -3,19 +3,20 @@
 *Acknowledgment: this tutorial is written by Yihan Jiang and revised by Callie Hao at Georgia Tech ECE.*
 
 ## Preliminary
-- Vitis HLS 2020.2
-- Vivado 2020.2
+- Vitis HLS 2021.1
+- Vivado 2021.1
 - Xilinx Ultra96 V2 FPGA Evaluation Board
-Note: Xilinx has a Y2K bug starting 2022 so please apply fixes first...
+
+Note: Xilinx has a Y2K bug starting 2022 so please apply fixes first. Details can be found at [this Piazza post](https://piazza.com/class/kyaogfd8r1s2xl?cid=14)
 
 ## Environment Setup
 
 Assume you have Vitis HLS and Vivado installed. Please execute the following commands, or add them to your bash file.
 ```sh
 source /tools/software/xilinx/setup_env.sh
-source /tools/software/xilinx/Vitis_HLS/2020.2/settings64.sh
-alias vitis_hls="/tools/software/xilinx/Vitis_HLS/2020.2/bin/vitis_hls"
-alias vivado="/tools/software/xilinx/Vivado/2020.2/bin/vivado"
+source /tools/software/xilinx/Vitis_HLS/2021.1/settings64.sh
+alias vitis_hls="/tools/software/xilinx/Vitis_HLS/2021.1/bin/vitis_hls"
+alias vivado="/tools/software/xilinx/Vivado/2021.1/bin/vivado"
 ```
 
 ## Design a simple adder using Vitis HLS
@@ -27,7 +28,7 @@ We first build a vector addition function using C++ in Vitis HLS. Later, we expo
 1. Create a new project; specify the project name. It is not necessary to specify the top function nor the testbench now.
 
 2. Select the correct `part` or `board` in the Part Selection during project initialization. 
-	- For PYNQ-Z2, select part `xc7z020clg400-1` with 220 DSPs.
+	- For PYNQ-Z2, select part `xc7z020clg400-1` with 220 DSPs. **Note**: in lab 3, please use Pynq-Z2.
 	- For Ultra96, select part `xczu3eg-sbva484-1-e` with 360 DSPs.
 
 3. Now we can write our accelerator in c++ and simulate with Vitis. Create a new source file named `top.c` as the following:

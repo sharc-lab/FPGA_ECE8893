@@ -12,6 +12,7 @@ This lab helps you run your design on a real FPGA. Briefly, here are the steps t
 
 ### Requirement:
 - To make life easier, in part A, let's only implement a simple vector addition. The HLS IP reads in a 1-D array of size 100 from DRAM, add 1 to each element, and write the array back to DRAM.
+- Please select `Pynq-Z2` board in your Vitis HLS and Vivado projects.
 - Please name your IP, i.e., the top function name, as `vec_add_<your_last_name>`.
 - In your host code, please *randomly initialize the input array values*. 
 
