@@ -8,20 +8,5 @@ ref:https://sites.google.com/view/vinegarhill-financelabs/home?authuser=0
 
 run: crr.py
 
-//////////////////////////////////////////////////////////////////////
-HLS folder: This has my HLS program for running my CRR model. Can do
-both C-sim and HLS synthesis setup env using the below commands
-/////////////////////////////////// source
-/tools/software/xilinx/setup\_env.sh source
-/tools/software/xilinx/Vitis\_HLS/2021.1/settings64.sh alias
-vitis\_hls="/tools/software/xilinx/Vitis\_HLS/2021.1/bin/vitis\_hls"
-alias vivado=\"/tools/software/xilinx/Vivado/2021.1/bin/vivado
-///////////////////////////////////////////////////////////////////////
-Compile: make
-
-execute C-simulation: ./csim.out
-
-HLS synthesis: lastyear vitis\_hls -f script.tcl
-
 //////////////////////////////////////////////////////
 
