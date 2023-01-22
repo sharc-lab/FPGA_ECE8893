@@ -96,3 +96,6 @@ Due date: Feb. 4 (Sat), 11:59 PM, no extension.
 Thanks to Adou Sangbone Assoa, PhD student with Prof. Arijit Raychowdhury and a former student of this course, for his idea of developing an accelerator for complex matrix multiplication!
 
 Thanks to Ashwin Bhat, also a PhD student with Prof. Arijit Raychowdhury and former student of this course, for his inputs in developing this lab!
+
+## Grading Rubric
+To be updated soon.
