@@ -57,6 +57,7 @@ We recommend using `csynth.rpt` to assess the overall latency and resource utili
     - `real_csynth.rpt` (Please rename `./real_proj/solution_1/syn/report/csynth.rpt` to `real_csynth.rpt` before submitting)
 
 2. (10 points) A brief report including:
+    - The baseline latency and resource utilization
     - The optimized latency you achieved; how much speed up you gained?
     - The resource utilization
     - What are the main techniques you adopted?
