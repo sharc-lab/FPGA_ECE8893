@@ -4,6 +4,8 @@ The goal of this lab is to design accelerators for matrix multiplication. There 
 - In Part A, you will optimize an existing implementation of matrix multiplication with real values. 
 - In Part B, you will implement matrix multiplication with complex values and optimize it. 
 
+In either part, we will multiply a $100\*150$ matrix with a $150\*200$ matrix to get a $100\*200$ matrix product and accelerate the design for Pynq-Z2 board.
+
 **Note**: Part A is very similar to Lab 1 of previous iteration of this course. Please read the policy for *Academic Integrity and Honor Code* below to ensure you don't fall into any troubles.
 
 ## Part A: Real Matrix Multiplication (30 points)
@@ -19,7 +21,7 @@ You need to optimize the design to achieve at least **10x** speed-up while ensur
 ## Part B: Complex Matrix Multiplication (70 points)
 Many applications in scientific computing and signal processing require working with not just the magnitude but also the phase. This information is aptly captured using complex numbers. Let's build on Part A and develop an accelerator to perform matrix multiplication with complex numbers.
 
-In this part of the lab, you are **not** provided with the trivial implementation. You need to implement the design first (can be trivial, ensure its functional correctness with the testbench provided, and then optimize the design to achieve at least **10x** speed-up while ensuring the resource utilization are all under 100%.
+In this part of the lab, you are **not** provided with the trivial implementation. You need to implement the design first (can be trivial), ensure its functional correctness with the testbench provided, and then optimize the design to achieve at least **10x** speed-up while ensuring the resource utilization are all under 100%.
 - `PartB/complex_matmul.cpp` is the top module of the accelerator that you need to modify.
 - `PartB/main.cpp` is the testbench. Do not change this file.
 
