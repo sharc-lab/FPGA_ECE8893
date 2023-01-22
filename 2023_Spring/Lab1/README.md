@@ -91,7 +91,7 @@ Furthermore, you should **NOT** be looking at the solutions provided in the prev
 
 Submission: on Canvas
 
-Due date: Feb. 4 (Sat), 11:59 PM, no extension.
+Due date: **Feb. 4 (Sat), 11:59 PM, no extension**.
 
 ## Acknowledgements
 Thanks to Adou Sangbone Assoa, PhD student with Prof. Arijit Raychowdhury and a former student of this course, for his idea of developing an accelerator for complex matrix multiplication!
