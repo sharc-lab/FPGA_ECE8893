@@ -17,9 +17,9 @@
 
 typedef ap_int<16> real_t;
 
+// Issue: https://piazza.com/class/lczabeu4s8s1io/post/22
 // Uses the C++ standard alignas type specifier to specify custom alignment of variables and user defined types.
 // Reference: https://docs.xilinx.com/r/en-US/ug1399-vitis-hls/Impact-of-Struct-Size-on-Pipelining
-
 struct alignas(8) complex_t {
     real_t real;
     real_t imag;

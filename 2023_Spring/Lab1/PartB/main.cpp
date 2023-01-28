@@ -20,7 +20,7 @@ void loadMatrix(string filename, int numRows, int numCols)
     complex_t Mat_tb[numRows][numCols];
 
     int i = 0, j = 0, t = 0;
-    int_t real, imag;
+    real_t real, imag;
 
     std::ifstream Mat(filename);
 
@@ -51,7 +51,7 @@ void loadMatrix(string filename, int numRows, int numCols)
 
 int main()
 {
-    int_t real, imag; 
+    real_t real, imag; 
     int i, j, t;
     
     // Load input matrices and expected output matrix
