@@ -15,12 +15,15 @@
 
 #include <ap_int.h>
 
-typedef ap_int<16> int_t;
+typedef ap_int<16> real_t;
 
-typedef struct complex_t {
-    int_t real;
-    int_t imag;
-} complex_t;
+// Uses the C++ standard alignas type specifier to specify custom alignment of variables and user defined types.
+// Reference: https://docs.xilinx.com/r/en-US/ug1399-vitis-hls/Impact-of-Struct-Size-on-Pipelining
+
+struct alignas(8) complex_t {
+    real_t real;
+    real_t imag;
+};
 
 #define M 100
 #define N 150
