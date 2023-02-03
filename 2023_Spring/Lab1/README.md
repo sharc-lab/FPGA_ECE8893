@@ -105,6 +105,8 @@ $$
 Speedup = \frac{Baseline\ Latency}{Optimized\ Latency}
 $$
 
+**Note:** Unless simulation test passes, any synthesis results you report have no value. If simulation failure cases are observed, evaluation will be done on a case-to-case basis and partial points may be awarded depending on the degree of simulation error. 
+
 ### Part A.1 (20 points)
 
 > simulationTestPass &rarr; +5 points   
