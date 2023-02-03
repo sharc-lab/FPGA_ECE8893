@@ -141,3 +141,7 @@ $$
 > Missing or incomplete information &rarr; -2 point for each question  
 > Report values different from the ones achieved in **Part A.1**  &rarr; -3 points each   
 > Insufficient description of technique(s) adopted &rarr; -2 points  
+
+### Part C (Extra 20 points)
+
+Awarded on a case-to-case to basis depending on how well the analysis/observations/implementations adhere to the questions stated.
