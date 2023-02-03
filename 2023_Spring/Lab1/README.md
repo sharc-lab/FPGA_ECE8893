@@ -91,7 +91,7 @@ Furthermore, you should **NOT** be looking at the solutions provided in the prev
 
 ## Submission Guideline
 
-Submission: on Canvas
+Submission: on Canvas for course students, via email (to TA) for Special Problems students
 
 Due date: **Feb. 4 (Sat), 11:59 PM, no extension**.
 
