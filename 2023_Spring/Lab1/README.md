@@ -101,4 +101,41 @@ Thanks to Adou Sangbone Assoa, PhD student with Prof. Arijit Raychowdhury and a 
 Thanks to Ashwin Bhat, also a PhD student with Prof. Arijit Raychowdhury and former student of this course, for his inputs in developing this lab!
 
 ## Grading Rubric
-To be updated soon.
+$$
+Speedup = \frac{Baseline\ Latency}{Optimized\ Latency}
+$$
+
+### Part A.1 (20 points)
+
+> simulationTestPass &rarr; +5 points   
+> **if** (simulationTestPass):  
+> &nbsp;&nbsp;&nbsp;&nbsp; **if**(speedup &geq; 10x), +7 points  
+> &nbsp;&nbsp;&nbsp;&nbsp; **else if**(2x &leq; speedup < 10x), +4 points  
+> &nbsp;&nbsp;&nbsp;&nbsp; **else**, +2 points  
+>   
+> &nbsp;&nbsp;&nbsp;&nbsp; **for** resource **in** [BRAM, DSP, FF, LUT]:  
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+2 points **if** utilization &leq; 100%  
+
+### Part A.2 (10 points)
+
+> Missing or incomplete information &rarr; -1 point for each question  
+> Report values different from the ones achieved in **Part A.1**  &rarr; -2 points each   
+> Insufficient description of technique(s) adopted &rarr; -2 points   
+
+### Part B.1 (50 points)
+
+> simulationTestPass &rarr; +15 points   
+> **if** (simulationTestPass):  
+> &nbsp;&nbsp;&nbsp;&nbsp; **if**(speedup &geq; 10x), +15 points  
+> &nbsp;&nbsp;&nbsp;&nbsp; **else if**(2x &leq; speedup < 10x), +10 points  
+> &nbsp;&nbsp;&nbsp;&nbsp; **else**, +5 points  
+>   
+> &nbsp;&nbsp;&nbsp;&nbsp; **for** resource **in** [BRAM, DSP, FF, LUT]:  
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+5 points **if** utilization &leq; 100%  
+
+### Part B.2 (20 points)
+
+> **if** baseline latency is not **~2x** or **~4x** of **PartA** baseline &rarr; -5 points unless justified  
+> Missing or incomplete information &rarr; -2 point for each question  
+> Report values different from the ones achieved in **Part A.1**  &rarr; -3 points each   
+> Insufficient description of technique(s) adopted &rarr; -2 points  
