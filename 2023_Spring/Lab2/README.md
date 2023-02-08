@@ -46,17 +46,17 @@ More of Part B and Part C later. To start with, you have to simply implement a 7
 
 ## Part A: Implementation of C Model for Convolution (30 points)
 
-Before we jump into the HLS implementation and start to play around with those pragmas that we love, we need to have a functionally correct implementation prepared to assist us with debugging. Without this reference C model, it is incredibly painful to debug the tiling-based convolution that you will implement after this.
+Before we jump into the HLS implementation and start to play around with those pragmas that we love, we need to have a functionally correct implementation prepared to assist us with debugging. Without a reference C model, it is incredibly painful to debug the tiling-based convolution that you will implement after this.
 
-In this part of the lab, you are required to implement the code that performs 7 x 7 convolution. You are provided with a testbench which reads the input image, layer parameters, as well the reference output feature map and performs a point-to-comparison with the obtained feature map. Mean Squared Error (MSE) is used as the metric for evaluation.
+In this part of the lab, you have to write a C/C++ program that performs 7 x 7 convolution. You are provided with a testbench which reads the input image, layer parameters, as well the reference output feature map and performs a point-to-comparison with the obtained feature map. Mean Squared Error (MSE) is used as the metric for evaluation.
 
 - ```bin``` contains the reference binary files
 - ```sim.cpp``` is the testbench that checks for functional correctness
 - ```model_conv.cpp``` is the source code file you need to update to implement 7 x 7 convolution
 
-There are a few caveats that you would need to keep in mind while writing your convolution code. This [article](https://sharc-knowledgebase.netlify.app/articles/cnn/tiling-based_convolution_for_hls/) from last year's lab explaining 3 x 3 convolution may be useful. Most of the concepts are extensible to 7 x 7 convolution. 
+There are a few caveats in handling border pixels that you would need to keep in mind while writing your convolution code. This [article](https://sharc-knowledgebase.netlify.app/articles/cnn/tiling-based_convolution_for_hls/) from last year's assignment explaining 3 x 3 convolution may be useful. Most of the concepts are extensible to 7 x 7 convolution. 
 
-**Note**: This part of the lab is simulation-only. You do not have to run Vitis synthesis!
+**Note**: This part of the lab is **simulation-only**. You do not have to run Vitis synthesis!
 
 ### How to Run the Code
 Just like in Lab 1, simply use the provided ```Makefile```. Run ```make``` and then execute the output (if successfully generated) with ```csim.out```.
