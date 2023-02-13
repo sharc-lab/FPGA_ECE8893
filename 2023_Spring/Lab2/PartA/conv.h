@@ -26,9 +26,6 @@ typedef float wt_t;
 #define STRIDE             2
 #define PADDING            3 
 
-#define N_TILE_ROWS (int) (OUT_FM_HEIGHT/OUT_BUF_HEIGHT)
-#define N_TILE_COLS (int) (OUT_FM_WIDTH/OUT_BUF_WIDTH)
-
 //--------------------------------------------------------------------------
 // Function Declaration
 //--------------------------------------------------------------------------
