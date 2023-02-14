@@ -42,8 +42,6 @@ This lab will be split into following parts:
 - **Part B**: Unoptimized but synthesizable tiled-convolution in HLS (30 points)
 - **Part C**: Optimized (and synthesizable) tiled-convolution in HLS (40 points)
 
-More of Part B and Part C later. To start with, you have to simply implement a 7 x 7 convolution with all your C/C++ knowledge and ensure functional correctness.
-
 ## Part A: Implementation of C Model for Convolution (30 points)
 
 Before we jump into the HLS implementation and start to play around with those pragmas that we love, we need to have a functionally correct implementation prepared to assist us with debugging. Without a reference C model, it is incredibly painful to debug the tiling-based convolution that you will implement after this.
@@ -58,6 +56,8 @@ There are a few caveats in handling border pixels that you would need to keep in
 
 **Note**: This part of the lab is **simulation-only**. You do not have to run Vitis synthesis!
 
+**Reference Material**: [Stanford CNN Cheatsheet][https://stanford.edu/~shervine/teaching/cs-230/cheatsheet-convolutional-neural-networks]
+
 ### How to Run the Code
 Just like in Lab 1, simply use the provided ```Makefile```. Run ```make``` and then execute the output (if successfully generated) with ```csim.out```.
 
@@ -67,22 +67,106 @@ Just like in Lab 1, simply use the provided ```Makefile```. Run ```make``` and t
    - What is the MSE obtained?
    - How did you handle the non-unit stride and border pixels?
 
-### Submission Deadline
+## Part B: Tiling-based Unoptimized Convolution (30 points)
+
+To address the challenges that come with scalability such as large inputs, a typical approach for hardware implementation is to split the input image into tiles and run convolution on each tile. The overall latency is then the latency of individual tile processing times the number of tiles in the image.
+
+In this part of the lab, you have to implement an unoptimized but synthesizable code that performs tiling-based convolution of the first 7 x 7 layer of ResNet-50 with HD input image. Similar to Part A, you are provided with a test bench and we will continue to use MSE as the evaluation metric.
+- ```bin``` contains the reference binary files
+- ```sim.cpp``` is the testbench that checks for functional correctness of your tiling-based convolution. 
+- ```tiled_conv.cpp``` is the top-level design that you will synthesize after implementing the convolution operation.
+- ```utils.cpp``` has utility functions to assist you with loading and storing of data. You can modify these functions as required or add any new ones for your design.
+- ```conv_7x7.cpp``` is the convolution engine that performs 7 x 7 convolution for a single tile.
+
+Again, please read this [article](https://sharc-knowledgebase.netlify.app/articles/cnn/tiling-based_convolution_for_hls/) to implement tiling-based convolution. Be mindful that this time the stride is 2 and the padding is 3 (on each side). While loading a tile, you would need to load some additional "features" of adjacent tiles. This is defined by ```MARGIN``` in the ```conv.h``` header file which you need to update. DO NOT change any other values in conv.h (as this file is not required for submission).
+
+**Note**: You don't need to add optimization pragmas in this part of the lab. The goal is to implement a tiling-based implementation that is functionally correct and to establish a baseline. 
+
+**Hint**: Following a calcluation method similar to the one described in the above article, you will observe that the 7 x 7 layer we are dealing with comprises of **~2.21 billion** MAC operations. At 100 MHz (10ns) clock, this traslates to **~22.1** seconds. Your unoptimizde (trivial) synthesis results should be around this value.
+
+**Caution**: Do not use any ```float``` variables while implementing your design. Since there is a type-casting of data type from floating-point to fixed-point for synthesis, you should always use ```fm_t``` or ```wt_t```.
+
+**Reference Material**: [Tiling-based Convolution][https://sharc-knowledgebase.netlify.app/articles/cnn/tiling-based_convolution_for_hls/]
+
+### How to Run the Code for Simulation and Synthesis
+- Use ```make``` to run simulation test using floating-point values.
+- Use ```make debug``` to run simulation and print floating-point values for debugging.
+- Use ```make hls_sim``` to run simulation using fixed-point values. (You will see the MSE increases!)
+- Use ```make hls_debug``` to run simulation and print fixed-point values for debugging. (You may not need to run this)
+
+- To run synthesis, use ```make synth```. Once synthesis completes, you can find the report file here: ```proj/solution1/syn/report/csynth.rpt```
+
+### What to Submit 
+1. ```PartB.tar.gz``` that contains the following:
+   - utils.h
+   - utils.cpp
+   - conv_7x7.cpp
+   - tiled_conv.cpp
+   - unoptimized_csynth.rpt (Please rename PartB/proj/solution_1/syn/report/csynth.rpt to unoptimized_csynth.rpt)
+2. A brief report (preferably in PDF format) describing:
+   - How many marginal features are needed to implement tiling?
+   - What is the MSE obtained in floating-point simulation?
+   - What is the MSE obtained in fixed-point simulation?
+   - What is the unoptimized latency and resource utilization obtained?
+   - What is the communication overhead? (Communication overhead is the ratio of load/store latency and the computation latency) 
+
+## Part C: Tiling-based Optimized Convolution (40 points + up to 10 points)
+
+Now for the most fun part. Take your PartB code and apply all your favorite pragmas and other techniques to optimize your convolution implementation. 
+
+You are provided with an identical copy of the source code files in a separate folder. Once done with PartB, you may copy parts of your code to PartC. Steps to run the code for simulation and synthesis are the same as PartB.
+
+Your target in the part of the lab is to achieve a latency of **750 ms or lower** without exceeding 100% resource utilization for the Pynq-Z2 board. You are also required to estimate how much of a speedup your optimized 7 x 7 tiling convolution code should hit to meet this overall speedup (Amdahl’s law in action!). 
+
+Furthermore, you need to estimate the communication overhead again and describe how it has changed compared to that of trivial implementation. 
+
+### What to Submit 
+1. ```PartC.tar.gz``` that contains the following:
+   - utils.h
+   - utils.cpp
+   - conv_7x7.cpp
+   - tiled_conv.cpp
+   - optimized_csynth.rpt (Please rename PartC/proj/solution_1/syn/report/csynth.rpt to optimized_csynth.rpt)
+2. A brief report (preferably in PDF format) describing:
+   - What is the optimized latency and resource utilization obtained?
+   - What are the main techniques you adopted?
+   - What is the new communication overhead and how does it compare to PartB value? 
+
+(Please rename PartB/proj/solution_1/syn/report/csynth.rpt to unoptimized_csynth.rpt)
+
+### Lowest Latency Contest! (Up to 10 extra points!)
+Perform design space exploration (DSE) and achieve the best latency while not exceeding resource utilization. We will maintain a leaderboard!
+- If your latency is less than 500 ms or among the Top 10 of the class, you get 5 points.
+- If your latency is among the Top 5 of the class, you get 5 additional points!
+
+## Part D: HLS Streaming Exploration! (Up to 10 extra points!)
+Implement the tiling-based convolution using streaming. You are free to change any file in this part of the lab as it will be evaluated separately. 
+
+### What to Submit 
+1. ```PartD.tar.gz``` that containing all the files and a README.md to run simulation and synthesis (if different from current mehtod)
+2. A brief report describing:
+   - The latency obtained and its comparison with PartC latency
+   - The overall resource utilization change
+   - The challenges you faced or any observations made
+
+Submit your analysis in the same report file.
+
+**Note**: You cannot report your latency obtained using streaming for the latency contest. 
+
+## Submission Deadline
 Submission: on Canvas for course students, via email (to TA) for Special Problems students
 
-Due date: **Feb. 18 (Sat), 11:59 PM, no extension**.
-
-## Part B: Tiling-based Unoptimized Convolution (30 points)
-To be released soon.
-
-## Part C: Tiling-based Optimized Convolution (40 points)
-To be released soon.
+Due date for Part A: **Feb. 18 (Sat), 11:59 PM, no extension**.
+Due date for Part B and Part C: **Mar. 4 (Sat), 11:59 PM**.
 
 ## Grading Rubric
 ### Part A.1
 > simulationTestPass &rarr; +25 points
 ### Part A.2
 > Missing or incomplete information &rarr; -2 points for each question
+
+### Part B and Part C
+Will be released soon.
 
 ## Academic Integrity and Honor Code
 You are required to follow Georgia Tech's [Honor Code](https://policylibrary.gatech.edu/student-life/academic-honor-code) and submit your original work in this lab. You can discuss this assignment with other classmates but you should code your assignment individually. You are **NOT** allowed to see the code of (or show your code to) other students.
