@@ -136,10 +136,10 @@ Furthermore, you need to estimate the communication overhead again and describe 
 
 **Note**: Please combine your Part A, B, and C (and D) reports in a single file and submit ```Lab2_Report_<Name>.pdf```. There is no template to follow, however, you are expected to write your report like a research paper.
 
-### Lowest Latency Contest! (Chance to grab 10 extra points!)
+### Need for Speed...-Up Contest (chance to grab 10 extra points!)
 Perform design space exploration (DSE) and achieve the best latency while not exceeding resource utilization. We will maintain a leaderboard!
-- If your latency is less than ```500 ms``` or among the ```Top 10``` of the class, you get 5 points.
-- If your latency is among the ```Top 5``` of the class, you get 5 additional points!
+- If your latency is less than ```500 ms``` or among the ```Top 10``` of the class, you get 5 extra points.
+- If your latency is among the ```Top 5``` of the class, you get 10 extra points (in total)!
 
 ## Part D: HLS Streaming Exploration (up to 10 extra points!)
 Implement the tiling-based convolution using streaming. You are free to change any file in this part of the lab as it will be evaluated separately. 
