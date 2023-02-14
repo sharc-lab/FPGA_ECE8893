@@ -104,7 +104,7 @@ While loading a tile, you would need to load some additional "features" of adjac
    - ```utils.cpp```
    - ```conv_7x7.cpp```
    - ```tiled_conv.cpp```
-   - ```unoptimized_csynth.rpt``` (Please rename PartB/proj/solution_1/syn/report/csynth.rpt to unoptimized_csynth.rpt)
+   - ```unoptimized_csynth.rpt``` (Please rename ```PartB/proj/solution_1/syn/report/csynth.rpt``` to ```unoptimized_csynth.rpt```)
 2. A brief report (preferably in PDF format) describing:
    - How many marginal features are needed to implement tiling?
    - What is the MSE obtained in floating-point simulation?
@@ -128,7 +128,7 @@ Furthermore, you need to estimate the communication overhead again and describe 
    - ```utils.cpp```
    - ```conv_7x7.cpp```
    - ```tiled_conv.cpp```
-   - ```optimized_csynth.rpt``` (Please rename PartC/proj/solution_1/syn/report/csynth.rpt to optimized_csynth.rpt)
+   - ```optimized_csynth.rpt``` (Please rename ```PartC/proj/solution_1/syn/report/csynth.rpt``` to ```optimized_csynth.rpt```)
 2. A brief report (preferably in PDF format) describing:
    - What is the optimized latency and resource utilization obtained?
    - What are the main techniques you adopted?
