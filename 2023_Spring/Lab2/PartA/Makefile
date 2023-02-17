@@ -6,7 +6,7 @@ IFLAG += -I "${ASSEMBLE_SRC_ROOT}"
 IFLAG += -I "/usr/include/x86_64-linux-gnu"
 IFLAG +=  -g
 
-CFLAG += -fPIC -O3 -std=c++11 -mcmodel=large
+CFLAG += -fPIC -O3 -std=c++11 -mcmodel=large -Wconversion
 CC      = g++ 
 
 ALLOUT+= csim.out
