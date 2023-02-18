@@ -5,7 +5,7 @@ IFLAG += -I "${AUTOPILOT_ROOT}/include"
 IFLAG += -I "${ASSEMBLE_SRC_ROOT}"
 IFLAG += -I "/usr/include/x86_64-linux-gnu"
 
-CFLAG += -fPIC -O3 -std=c++11 -mcmodel=large
+CFLAG += -fPIC -O3 -std=c++11 -mcmodel=large -Wconversion
 CC      = g++ 
 
 ALLOUT+= csim.out
