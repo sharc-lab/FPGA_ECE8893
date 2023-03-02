@@ -160,7 +160,7 @@ Submission: on Canvas for course students, via email (to TA) for Special Problem
 
 Due date for Part A: **Feb. 18 (Sat), 11:59 PM, no extension**. 
 
-Due date for Part BC(D): **Mar. 4 (Sat), 11:59 PM**.
+Due date for Part BC(D): **~Mar. 4 (Sat)~ Mar. 7 (Tue), 11:59 PM, no further extension.**
 
 ## Grading Rubric
 ### Part A.1
