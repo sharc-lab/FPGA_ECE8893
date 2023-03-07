@@ -169,8 +169,8 @@ Due date for Part BC(D): **~Mar. 4 (Sat)~ Mar. 7 (Tue), 11:59 PM, no further ext
 > Missing or incomplete information &rarr; -2 points for each question
 
 ### Part B 
-> simulationTestPass → +15 points 
-> Code is synthesizable (Vitis run completes without errors) → +5 points 
+> simulationTestPass → +15 points   
+> Code is synthesizable (Vitis run completes without errors) → +5 points   
 > Missing or incomplete or inconsistent information → -2 points for each question 
 
 ### Part C
