@@ -168,8 +168,25 @@ Due date for Part BC(D): **~Mar. 4 (Sat)~ Mar. 7 (Tue), 11:59 PM, no further ext
 ### Part A.2
 > Missing or incomplete information &rarr; -2 points for each question
 
-### Part B and Part C
-Will be released soon.
+### Part B 
+> simulationTestPass → +15 points 
+> Code is synthesizable (Vitis run completes without errors) → +5 points 
+> Missing or incomplete or inconsistent information → -2 points for each question 
+
+### Part C
+> **if**(test pass)  
+> &nbsp;&nbsp;&nbsp;&nbsp; **if**(latency &leq; 750 ms), +40 points  
+> &nbsp;&nbsp;&nbsp;&nbsp; **else if** (750 ms < latency < 1 s), +35 points  
+> &nbsp;&nbsp;&nbsp;&nbsp; **else if** (1 s < latency < 2 s), +20 points  
+> &nbsp;&nbsp;&nbsp;&nbsp; **else**, +10 points  
+>    
+> &nbsp;&nbsp;&nbsp;&nbsp; **for** resource **in** [BRAM, DSP, FF, LUT]:    
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-10 points **if** utilization > 100%    
+>  
+> If synthesis fails or times out (10 minutes), -10 points.  
+> In report, any missing or incomplete or inconsistent information → -2 points for each question 
+
+Late submission allowed until Mar 8, 11:59 PM. However, any submissions received after Mar 7, 11:59PM will result in 1% penalty from overall points for every hour of delay graded based on above rubric.
 
 ## Academic Integrity and Honor Code
 You are required to follow Georgia Tech's [Honor Code](https://policylibrary.gatech.edu/student-life/academic-honor-code) and submit your original work in this lab. You can discuss this assignment with other classmates but you should code your assignment individually. You are **NOT** allowed to see the code of (or show your code to) other students.
