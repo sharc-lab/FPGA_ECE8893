@@ -100,7 +100,9 @@ Submission: on Canvas for course students, via email (to TA) for Special Problem
 
 Due date for Part A: **Mar. 19 (Sun), 11:59 PM, no extension**. 
 
-Due date for Part B & C: **Apr. 29 (Sat), 11:59 PM**.
+Due date for Part B & C: **Apr. 29 (Sat), 11:59 PM**. 
+
+**Note:** Extension will be given for up to 2 additional days only in case there is a known OOD issue in accessing Pynq-Z2 boards. No extension beyond **May 1 (Mon), 11:59 PM** for any reason whatsoever. 
 
 ## Grading Rubric
 
