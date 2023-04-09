@@ -1,3 +1,5 @@
+# Author: Rishov Sarkar
+
 # Convert floating-point array to fixed-point
 # Sample Usage:
 # to_fixed_point(A_fixp, A_float, iwidth=3)
