@@ -56,7 +56,7 @@ There are a few caveats in handling border pixels that you would need to keep in
 
 **Note**: This part of the lab is **simulation-only**. You do not have to run Vitis synthesis!
 
-**Reference Material**: [Stanford CNN Cheatsheet][https://stanford.edu/~shervine/teaching/cs-230/cheatsheet-convolutional-neural-networks]
+**Reference Material**: [Stanford CNN Cheatsheet](https://stanford.edu/~shervine/teaching/cs-230/cheatsheet-convolutional-neural-networks)
 
 ### How to Run the Code
 Just like in Lab 1, simply use the provided ```Makefile```. Run ```make``` and then execute the output (if successfully generated) with ```csim.out```.
