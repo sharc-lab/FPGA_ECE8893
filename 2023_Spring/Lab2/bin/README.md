@@ -10,4 +10,4 @@ However, GitHub does not allow uploading files larger than 25MB. :/
 
 The problems that come with scale and large model inputs/outputs. Designs don't fit on board, compilers can't allocate memory on stack, and the list goes on and on. This is just the tip of the iceberg. 
 
-Anyhoo, please download the binary files for this lab [here](https://www.dropbox.com/sh/0fblnlpdx8t7fh7/AABE5X86cvmRR8FGBpTXtyNta?dl=0) and put these in your **PartA/bin** folder while cloning the repository. 
+Anyhoo, please download the binary files for this lab [here](https://www.dropbox.com/scl/fo/pxh1xy0bnmee465avowbe/AL47dPthXWXFsSAH7DlKJ3Y?rlkey=zipsumtzo0k8ccg4xhgmz1e4s&st=ezzlc72t&dl=0) and put these in your **PartA/bin** folder while cloning the repository. 
