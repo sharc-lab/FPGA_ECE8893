@@ -99,9 +99,11 @@ A reference implementation (unoptimized) is provided as a baseline. Your goal is
 Your implementation will be scored as follows:
 
 - **Correctness** (\(a\)):
+
   $$
   a = 1 - \text{MSE}
   $$
+
   where $\text{MSE}$ is the Mean Squared Error compared to the reference output. Small errors may occur if softmax approximations are applied.
 
 - **Implementability** (\(b\)):
