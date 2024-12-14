@@ -48,7 +48,7 @@ A reference implementation (unoptimized) is provided as a baseline. Your goal is
 2. **Place-and-Route Success**:
    - Your design must be implementable and generate a valid bitstream.
 3. **Fixed Dimensions**:
-   - Do not change `B`, `N`, `d_k`, or `d_v`.
+   - Do not change `B`, `N`, `dk`, or `dv`.
 4. **Report Accurate Latency**:
    - Report latency using **C/RTL co-simulation** or **LightningSim** (recommended for faster results).
 
@@ -102,23 +102,17 @@ Your implementation will be scored as follows:
 
 - **Implementability** ($b$): $b = 1$ if the design can place-and-route and generate a valid bitstream; otherwise, $b = 0$.
 
-- **Speedup Ratio** (\(s\)):
-  
-$$
-s = \frac{\text{baseline\_latency}}{\text{your\_latency}}
-$$
+- **Speedup Ratio** ($s$): $s = \frac{\text{baseline\_latency}}{\text{your\_latency}}$ where your latency is compared against the unoptimized baseline latency.
 
-  where your latency is compared against the unoptimized baseline latency.
-
-- **Relative Speedup Score** (\(r\)):
-  Competes within the class:
-  $$
-  r =
-  \begin{cases}
-  0.2 & \text{if } s < 10 \\
-  0.6 + 0.4 \times \left(1 - \frac{\text{your\_rank} - 1}{\text{total\_submissions} - 1}\right) & \text{otherwise}.
-  \end{cases}
-  $$
+- **Relative Speedup Score** ($r$): Competes within the class:
+- 
+$$
+r =
+\begin{cases}
+0.2 & \text{if } s < 10 \\
+0.6 + 0.4 \times \left(1 - \frac{\text{your\_rank} - 1}{\text{total\_submissions} - 1}\right) & \text{otherwise}.
+\end{cases}
+$$
 
 - **Bonus** (\(e\)):
   $$
