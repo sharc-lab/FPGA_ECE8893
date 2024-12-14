@@ -130,6 +130,7 @@ Your report will be manually graded based on:
 - Resource utilization analysis.
 - Bottleneck identification and resolution.
 - Clear presentation of results and comparisons.
+- Use IEEE double-column latex format.
 
 ---
 
