@@ -15,9 +15,10 @@ In this lab, we will:
 ## Problem Statement
 
 Your task is to implement the **sparse matrix multiplication** operation:
-$
+
+$$
 C[i][j] = \sum_k A[i][k] \cdot B[k][j]
-$
+$$
 
 ### Inputs:
 
@@ -79,33 +80,19 @@ $
 
 Your implementation will be scored as follows:
 
-- **Correctness** ($a$):
-  - $a = 1 - MSE$, where $MSE$ is the Mean Squared Error between your $C$ and the reference output.
-  - Small error may occur if approximations are applied.
+- **Correctness** (a): a = 1 - MSE
 
-- **Implementability** ($b$):
-  - $b = 1$ if the design can place-and-route and generate a valid bitstream.
-  - $b = 0$ otherwise.
+- **Implementability** (b): b = 1 if the design can place-and-route and generate a valid bitstream; b = 0 otherwise.
 
-- **Speedup Ratio** ($s_i$):
-  - $s_i = \frac{\text{baseline\_latency\_sparsity\_i}}{\text{your\_latency\_sparsity\_i}}$
-    - Your latency is compared against the unoptimized baseline latency, sparsity ratios of $i \in \{ 0.1, 0.5, 0.8 \}$.
+- **Speedup Ratio** (s_i): s_i = baseline_latency_sparsity_i / your_latency_sparsity_i
+    - Your latency is compared against the unoptimized baseline latency, under sparsity ratios of 0.1, 0.5, 0.8.
 
-- **Relative Speedup Score** ($r$):
-  - Competes within the class:
-    $$
-        r_i =
-    \begin{cases} 
-    0.1 & \text{if } s_i < 10 \\ 
-    0.2 + 0.2 \times \left(1 - \frac{\text{your\_rank\_sparsity\_i} - 1}{\text{total\_submission\_sparsity\_i} - 1}\right) & \text{otherwise}.
-    \end{cases}
-    $$
-    $ r = \sum_{i \in \{0.1, 0.5, 0.8\}} r_i$
+- **Relative Speedup Score** (r): Competes within the class:
+    - If speedup is smaller than 10, r_i = 0.1;
+    - othersies, r_i = 0.2 + 0.2 * (1 - (your_rank_sparsity_i - 1} / (total_submission_sparsity_i - 1))
+    - r = sum(r_i), i = 0.1, 0.5, 0.8
 
-- **Final Implementation Score**:
-  $
-  f = 80 \cdot r \cdot b \cdot a
-  $
+- **Final Implementation Score**: f = 80 * r * b * a
 
 ---
 
