@@ -105,7 +105,7 @@ Your implementation will be scored as follows:
 - **Speedup Ratio** (s): s = baseline_latency / your_latency, where your latency is compared against the unoptimized baseline latency.
 
 - **Relative Speedup Score** (r): Competes within the class:
-r = 0.2, if s < 10; r = 0.6 + 0.4 x (1 - (your_rank - 1)/(total_submissions - 1)
+if speedup ratio is smaller than 10, r = 0.2; otherwise, r = 0.6 + 0.4 x (1 - (your_rank - 1)/(total_submissions - 1)
 
 - **Bonus** (e): e = max(0, 6 - your_rank)
 
