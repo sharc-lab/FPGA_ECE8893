@@ -105,8 +105,7 @@ Your implementation will be scored as follows:
 - **Relative Speedup Score** ($r$):
   - Competes within the class:
     
-    $$r =
-    \begin{cases} 
+    $$r = \begin{cases} 
     0.2 & \text{if } s < 10 \\
     0.6 + 0.4 \times \left(1 - \frac{\text{your\_rank} - 1}{\text{total\_submission} - 1}\right) & \text{otherwise}
     \end{cases}
