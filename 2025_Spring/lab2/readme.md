@@ -104,8 +104,8 @@ Your implementation will be scored as follows:
 
 - **Relative Speedup Score** ($r$):
   - Competes within the class:
-    $$
-        r =
+    
+    $$r =
     \begin{cases} 
     0.2 & \text{if } s < 10 \\
     0.6 + 0.4 \times \left(1 - \frac{\text{your\_rank} - 1}{\text{total\_submission} - 1}\right) & \text{otherwise}
@@ -113,12 +113,10 @@ Your implementation will be scored as follows:
     $$
 
 - **Bonus** ($e$)
-  - $ e = \text{max} (0, 6 - \text{your\_rank})$
+  - $e = \text{max} (0, 6 - \text{your\_rank})$
 
 - **Final Implementation Score**:
-  $$
-  f = \max(80, r \cdot b \cdot a) + e
-  $$
+  $f = \max(80, r \cdot b \cdot a) + e$
 
 ---
 
