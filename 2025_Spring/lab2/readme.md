@@ -92,7 +92,7 @@ $$
 Your implementation will be scored as follows:
 
 - **Correctness** ($a$):
-  - $ a = 1 - MSE $, where $MSE$ is the Mean Squared Error compared to the reference output.
+  - $a = 1 - MSE$, where $MSE$ is the Mean Squared Error compared to the reference output.
   - Small error may occur if softmax approximations are applied.
 
 - **Implementability** ($b$):
@@ -100,7 +100,7 @@ Your implementation will be scored as follows:
   - $b = 0$ otherwise.
 
 - **Speedup Ratio** ($s$):
-  - $ s = \frac{\text{baseline\_latency}}{\text{your\_latency}} $, where your latency is compared against the unoptimized baseline latency.
+  - $s = \frac{\text{baseline\_latency}}{\text{your\_latency}}$, where your latency is compared against the unoptimized baseline latency.
 
 - **Relative Speedup Score** ($r$):
   - Competes within the class:
