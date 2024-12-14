@@ -105,7 +105,7 @@ Your implementation will be scored as follows:
 - **Speedup Ratio** ($s$): $s = \frac{\text{baseline\_latency}}{\text{your\_latency}}$ where your latency is compared against the unoptimized baseline latency.
 
 - **Relative Speedup Score** ($r$): Competes within the class:
-- 
+  
 $$
 r =
 \begin{cases}
