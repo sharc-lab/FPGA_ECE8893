@@ -98,24 +98,16 @@ A reference implementation (unoptimized) is provided as a baseline. Your goal is
 
 Your implementation will be scored as follows:
 
-- **Correctness** (\(a\)):
+- **Correctness** ($a$): $a = 1 - \text{MSE}$ where MSE is the Mean Squared Error compared to the reference output. Small errors may occur if softmax approximations are applied.
 
-$$
-a = 1 - \text{MSE}
-$$
-
-  where $\text{MSE}$ is the Mean Squared Error compared to the reference output. Small errors may occur if softmax approximations are applied.
-
-- **Implementability** (\(b\)):
-  $$
-  b = 1 \text{ (if the design can place-and-route and generate a valid bitstream)}.
-  $$
-  Otherwise, \(b = 0\).
+- **Implementability** ($b$): $b = 1$ if the design can place-and-route and generate a valid bitstream; otherwise, $b = 0$.
 
 - **Speedup Ratio** (\(s\)):
-  $$
-  s = \frac{\text{baseline\_latency}}{\text{your\_latency}}
-  $$
+  
+$$
+s = \frac{\text{baseline\_latency}}{\text{your\_latency}}
+$$
+
   where your latency is compared against the unoptimized baseline latency.
 
 - **Relative Speedup Score** (\(r\)):
