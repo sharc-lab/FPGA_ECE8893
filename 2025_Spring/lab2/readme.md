@@ -16,9 +16,9 @@ In this lab, we will:
 
 Your task is to implement the `compute_attention` function, which performs scaled dot-product attention:
 
-\[
+$$
 \text{Attention}(i, j) = \text{Softmax}\left(\frac{Q \cdot K^\top}{\sqrt{d_k}}\right) \cdot V
-\]
+$$
 
 ### Inputs:
 
@@ -99,42 +99,42 @@ A reference implementation (unoptimized) is provided as a baseline. Your goal is
 Your implementation will be scored as follows:
 
 - **Correctness** (\(a\)):
-  \[
+  $$
   a = 1 - \text{MSE}
-  \]
-  where \(\text{MSE}\) is the Mean Squared Error compared to the reference output. Small errors may occur if softmax approximations are applied.
+  $$
+  where $\text{MSE}$ is the Mean Squared Error compared to the reference output. Small errors may occur if softmax approximations are applied.
 
 - **Implementability** (\(b\)):
-  \[
+  $$
   b = 1 \text{ (if the design can place-and-route and generate a valid bitstream)}.
-  \]
+  $$
   Otherwise, \(b = 0\).
 
 - **Speedup Ratio** (\(s\)):
-  \[
+  $$
   s = \frac{\text{baseline\_latency}}{\text{your\_latency}}
-  \]
+  $$
   where your latency is compared against the unoptimized baseline latency.
 
 - **Relative Speedup Score** (\(r\)):
   Competes within the class:
-  \[
+  $$
   r =
   \begin{cases}
   0.2 & \text{if } s < 10 \\
   0.6 + 0.4 \times \left(1 - \frac{\text{your\_rank} - 1}{\text{total\_submissions} - 1}\right) & \text{otherwise}.
   \end{cases}
-  \]
+  $$
 
 - **Bonus** (\(e\)):
-  \[
+  $$
   e = \max(0, 6 - \text{your\_rank})
-  \]
+  $$
 
 - **Final Implementation Score**:
-  \[
+  $$
   f = \max(80, r \cdot b \cdot a) + e
-  \]
+  $$
 
 ---
 
