@@ -20,15 +20,15 @@ Your task is to design efficient neuro (e.g., ResNet18) and symbolic (e.g., circ
 ### Neuro Kernel (ResNet18)
 - **Purpose**: Processes input image patches, identifies feature attributes of compound objects, and stores the results.
 - **Reference Code**: `neural/neural_resnet_18.py`
-- **Input Data**: `neural/neural_input/image_X.npy` (X: 1-6)
-- **Output Data**: `neural/neural_output/image_X.npy` (X: 1-6)
+- **Input Data**: `neural/neural_input/image_X.npy` (`X`: 1-6)
+- **Output Data**: `neural/neural_output/image_X.npy` (`X`: 1-6)
 - **Running Command**: `python neural_resnet_18.py --model_path model_best.pth.tar --input_path ./neural_input/image_X.npy --output_ref_path ./neural_output/model_output_X.npy --device cuda:0` (please specify `X`)
 
 ### Symbolic Kernel (Circular Convolution)
 - **Purpose**: Processes input probabilistic scene vectors, deduces underlying rules in the Raven Progressive Matrices (RPM) spatial-temporal reasoning task, and stores the results.
 - **Reference Code**: `symbolic/symbolic_circular_conv.py`
-- **Input Data**: `symbolic/symbolic_input/inputX_A.npy`, `symbolic/symbolic_input/inputX_B.npy` (X: 1-6)
-- **Output Data**: `symbolic/symbolic_output/outputX_C.npy` (X: 1-6)
+- **Input Data**: `symbolic/symbolic_input/inputX_A.npy`, `symbolic/symbolic_input/inputX_B.npy` (`X`: 1-6)
+- **Output Data**: `symbolic/symbolic_output/outputX_C.npy` (`X`: 1-6)
 - **Running Command**: `python symbolic_circular_conv.py --input_A_path ./symbolic_input/inputX_A.npy --input_B_path ./symbolic_input/inputX_B.npy --output_ref_path ./symbolic_output/outputX_C.npy --device cuda:0` (please specify `X`)
 
 ### Design Objectives
@@ -45,7 +45,7 @@ Our provided codebase is a portion of the end-to-end neuro-vector-symbolic syste
 
 ## Design Hints
 - **Optimization Techniques**: Utilize optimization techniques covered in this class, such as memory specialization (e.g., array partitioning, data reuse) and compute specialization (e.g., pipelining, loop unrolling, parallelism, dataflow, multithreading, loop tiling, loop fusion) to optimize the neuro and symbolic kernels.
-- **ResNet**: The ResNet18 HLS implementation can be referred to [SkyNet] (https://github.com/TomG008/SkyNet/tree/master/FPGA/HLS).
+- **ResNet**: The ResNet18 HLS implementation can be referred to ["SkyNet"] (https://github.com/TomG008/SkyNet/tree/master/FPGA/HLS).
 - **Circular Convolution**: Is the vector-symbolic circular convolution kernel compute- or memory-bound? Is a systolic array architecture efficient for circular convolution? Explore ways to optimize dataflow and mapping for high-dimensional vector-based circular convolution.
 
 ---
