@@ -67,7 +67,6 @@ Your design will be evaluated based on the following criteria:
 ## Evaluation Criteria
 - **End-to-End Latency**: Measure the total time required to process neuro and symbolic kernels, from reading input data to writing processed results back to DRAM.
 - **Post-Implementation Resource Utilization**: Report FPGA resource usage, including DSP slices, BRAM, LUTs, and FFs.
-- **Speedup Comparison**: Compare the latency of the FPGA implementation with the original Python implementation on a CPU. Report the speedup achieved.
 
 ---
 
