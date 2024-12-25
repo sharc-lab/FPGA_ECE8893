@@ -32,7 +32,7 @@ def parse_arguments():
         '--output_ref_path',
         type=str,
         required=True,
-        help='Path to the reference output .npy file (e.g., model_output_1.npy)'
+        help='Path to the reference output .npy file (e.g., output_1.npy)'
     )
 
     parser.add_argument(
