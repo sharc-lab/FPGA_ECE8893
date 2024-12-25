@@ -7,7 +7,7 @@ In this project, you will implement **neuro** and **symbolic** kernels and optim
 
 ## Motivation
 
-Neuro-symbolic AI is an emerging compositional paradigm that fuses neural learning with symbolic reasoning to enhance the transparency, interpretability, and trustworthiness of AI. This approach mirrors human cognitive processes, where lower-level sensory inputs are processed by neural mechanisms (System 1: “thinking fast”), and higher-level cognitive functions involve symbolic reasoning and deduction (System 2: “thinking slow”) ["Towards Cognitive AI Systems: Workload and Characterization of Neuro-Symbolic AI"](https://ieeexplore.ieee.org/document/10590020).
+Neuro-symbolic AI is an emerging compositional paradigm that fuses neural learning with symbolic reasoning to enhance the transparency, interpretability, and trustworthiness of AI. This approach mirrors human cognitive processes, where lower-level sensory inputs are processed by neural mechanisms (System 1: “thinking fast”), and higher-level cognitive functions involve symbolic reasoning and deduction (System 2: “thinking slow”). (["Towards Cognitive AI Systems: Workload and Characterization of Neuro-Symbolic AI"](https://ieeexplore.ieee.org/document/10590020))
 
 Despite its impressive cognitive capabilities, enabling real-time and efficient neuro-symbolic AI remains a challenging problem, critical for numerous reasoning and human-AI applications. For example, the ["Neuro-Vector-Symbolic System"](https://www.nature.com/articles/s42256-023-00630-8) requires over a minute to process a single task even on TPU and desktop GPU. Analysis shows that neural and vector-symbolic circular convolution operations account for most of the latency.
 
@@ -75,23 +75,22 @@ Your design will be evaluated based on the following criteria:
    - Use **HLSFactory** for submission unless publication is planned.
 
 2. **Simulation Results**:
-   - Demonstrate correctness for all matrix multiplication configurations.
+   - Verify correctness of your computation using simulation.
 
 3. **Performance Report**:
-   - Accuracy: Compare output matrices with 32-bit floating-point results and compute MSE.
-   - Latency: Measure latency for each configuration using **C/RTL Co-Simulation** or **LightningSim**.
-   - Resource Utilization: Provide data post-implementation (after place-and-route), including the generated bitstream.
+   - **Latency**: Measure latency for neuro and symbolic kernel using **C/RTL Co-Simulation** or **LightningSim**.
+   - **Resource Utilization**: Provide data post-implementation (after place-and-route), including the generated bitstream.
 
 4. **Technical Report**:
    - Use LaTeX in IEEE double-column format. Include:
      - **Design Overview**:
-       - Component-level details (e.g., multiplier design for mixed precisions).
-       - Algorithm-level details (e.g., matrix tiling, scheduling, and buffering strategies).
+       - Algorithm-level details, including any optimizations made to improve performance.
+       - Hardware component details, focusing on the core processing elements.
      - **Experimental Results**:
-       - Performance and resource usage.
-       - Comparisons with baselines (e.g., unoptimized designs or alternative sharing strategies).
+       - Performance metrics (latency, throughput, etc.) and resource usage.
+       - Comparisons with baseline Python implementation on a CPU.
      - **Insights and Takeaways**:
-       - Lessons learned and potential improvements.
+       - Lessons learned, challenges encountered, and potential areas for improvement.
 
 ---
 
