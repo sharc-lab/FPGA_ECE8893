@@ -11,7 +11,7 @@ Neuro-symbolic AI is an emerging compositional paradigm that fuses neural learni
 
 Despite its impressive cognitive capabilities, enabling real-time and efficient neuro-symbolic AI remains a challenging problem, critical for numerous reasoning and human-AI applications. For example, the ["Neuro-Vector-Symbolic System"](https://www.nature.com/articles/s42256-023-00630-8) requires over a minute to process a single task even on TPU and desktop GPU. Analysis shows that neural and vector-symbolic circular convolution operations account for most of the latency.
 
-Your task is to design efficient neural (e.g., one layer of ResNet18) and symbolic (e.g., circular convolution) kernels while minimizing resource usage and latency. The project builds upon the neuro-vector-symbolic system [codebase] (https://github.com/IBM/neuro-vector-symbolic-architectures-raven/tree/main).
+Your task is to design efficient neural (e.g., one layer of ResNet18) and symbolic (e.g., circular convolution) kernels while minimizing resource usage and latency. The project builds upon the neuro-vector-symbolic system [codebase](https://github.com/IBM/neuro-vector-symbolic-architectures-raven/tree/main).
 
 ---
 
