@@ -50,7 +50,7 @@ The final project involves working in groups (up to 4 members per group) to solv
   - Translate the give Python code into synthesizable HLS C.
   - Optimize the end-to-end latency and the overall throughput for processing all graphs
 
-#### **Topic 32: Hardware Design for High Energy Physics Pixel Clustering**
+#### **Topic 3: Hardware Design for High Energy Physics Pixel Clustering**
 - Objective: Create an optimal hardware design for a pixel clustering algorithm, used in high energy physics.
 - Key Tasks:
   - Design your own algorithm and implementation for a pixel clustering algorithm.
