@@ -50,17 +50,23 @@ The final project involves working in groups (up to 4 members per group) to solv
   - Translate the give Python code into synthesizable HLS C.
   - Optimize the end-to-end latency and the overall throughput for processing all graphs
 
-
-#### **Topic 3: Hardware Design for Cryptography Algorithms (TBA)**
-- Objective: Create an optimal hardware design for a cryptographic algorithm primitive.
+#### **Topic 32: Hardware Design for High Energy Physics Pixel Clustering**
+- Objective: Create an optimal hardware design for a pixel clustering algorithm, used in high energy physics.
 - Key Tasks:
-  - Fully explore the design space.
-  - Identify the best algorithm and hardware pair.
-- Notes: Detailed introduction will be provided by Prof. Qirun Zhang (SCS).
+  - Design your own algorithm and implementation for a pixel clustering algorithm.
+  - Optimize the end-to-end latency and the overall throughput for processing events.
 
 #### **Topic 4: Accelerator for Neurosymbolic AI (TBA)**
 - Objective: Design an accelerator for neurosymbolic AI computation.
-- Notes: Topic and details will be introduced by Zishen Wan.
+- Notes: problem provided by Zishen Wan.
+
+
+#### **Topic 5: Hardware Design for Cryptography Primitive**
+- Objective: Create an optimal hardware design for a cryptographic algorithm primitive: modular multiplication.
+- Key Tasks:
+  - Fully explore the design space.
+  - Identify the best algorithm and hardware pair.
+- Notes: problem provided by Prof. Qirun Zhang (SCS).
 
 ---
 
