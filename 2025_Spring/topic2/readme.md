@@ -1,7 +1,10 @@
 # Final Project Topic 2: Connected Component Analysis
 
 ## Project Description
-In this project, you will translate and optimize the given Python code, `build_track.py`, into High-Level Synthesis (HLS) to accelerate its functionality on an FPGA. The program processes input graphs stored in `.npz` files by performing the following steps:
+In this project, you will translate and optimize the given Python code, `build_track.py`, into High-Level Synthesis (HLS) to accelerate its functionality on an FPGA. This is a real problem -- HEP researchers are waiting for you.
+
+
+The program processes input graphs stored in `.npz` files by performing the following steps:
 
 1. **Graph Loading**: Reads graph data and edge probabilities from `.npz` files located in `/input_graphs/`.
 2. **Connected Components Detection**: Identifies connected components in the graph using Depth-First Search (DFS) to determine disjoint tracks.
