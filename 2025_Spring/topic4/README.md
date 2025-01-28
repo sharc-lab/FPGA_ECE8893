@@ -1,4 +1,4 @@
-# Final Project Topic 3: Neuro-Symbolic Kernel Optimization for Cognitive AI Systems
+# Final Project Topic 4: Neuro-Symbolic Kernel Optimization for Cognitive AI Systems
 
 ## Overview
 
