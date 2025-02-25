@@ -46,7 +46,7 @@ A reference implementation (unoptimized) is provided as a baseline. Your goal is
 1. **No DRAM Partitioning**:
    - Avoid partitioning arrays in DRAM.
 2. **Place-and-Route Success**:
-   - Your design must be implementable and generate a valid bitstream.
+   - Your design must be implementable, i.e., can finish place and route.
 3. **Fixed Dimensions**:
    - Do not change `B`, `N`, `dk`, or `dv`.
 4. **Report Accurate Latency**:
@@ -78,16 +78,14 @@ A reference implementation (unoptimized) is provided as a baseline. Your goal is
 
 1. **Source Code**:
    - Provide well-documented HLS source code (`.cpp` and `.h` files).
-   - Include the HLS synthesis report, C/RTL co-simulation report (or LightningSim screenshot), and post-implementation resource utilization report.
-2. **Bitstream File**:
-   - Submit the generated `.bit` file to confirm your design is implementable.
-3. **Technical Report**:
+   - Include the HLS synthesis report, C/RTL co-simulation report, and post-implementation resource utilization report.
+2. **Technical Report**:
    - Include the following in your report:
+     - Post-implementation resource utilization (LUTs, BRAMs, DSPs, FFs).
+     - Post-implementation latency: `co-sim-cycle-count * post-implementation-clock-period`
+     - Comparison between computed and reference outputs (to make sure your MSE is acceptable).
      - Key optimizations applied.
-     - Resource utilization (LUTs, BRAMs, DSPs, FFs).
      - Identified bottlenecks and how they were resolved.
-     - Post-implementation latency.
-     - Comparison between computed and reference outputs.
      - Anything else worth discussing.
 
 ---
@@ -100,7 +98,7 @@ Your implementation will be scored as follows:
 
 - **Correctness** (a): a = 1 - MSE where MSE is the Mean Squared Error compared to the reference output. Small errors may occur if softmax approximations are applied.
 
-- **Implementability** (b): b = 1 if the design can place-and-route and generate a valid bitstream; otherwise, b = 0.
+- **Implementability** (b): b = 1 if the design can place-and-route (finish implementation); otherwise, b = 0.
 
 - **Speedup Ratio** (s): s = baseline_latency / your_latency, where your latency is compared against the unoptimized baseline latency.
 
@@ -130,8 +128,7 @@ Your report will be manually graded based on:
 Submit the following files:
 
 1. **Source Code**: `.cpp` and `.h` files.
-2. **Bitstream File**: `.bit` file.
-3. **Report**: `.pdf` file.
+2. **Report**: `.pdf` file.
 
 ---
 
