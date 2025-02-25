@@ -109,7 +109,7 @@ if speedup ratio is smaller than 10, r = 0.2; otherwise, r = 0.6 + 0.4 x (1 - (y
 
 - **Bonus** (e): e = max(0, 6 - your_rank)
 
-- **Final Implementation Score**: f = max(80, r * b * a) + e
+- **Final Implementation Score**: f = min(80, r * b * a) + e
 
 ---
 
