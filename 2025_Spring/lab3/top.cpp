@@ -25,7 +25,7 @@ void sparse_matrix_multiply_HLS(data_t values_A[N * M], int column_indices_A[N *
 
             // Iterate over columns of B corresponding to row k
             for (int idx_B = col_ptr_B[k]; idx_B < col_ptr_B[k + 1]; idx_B++) {
-                int j = row_indices_B[idx_B]; // Column index of B
+                int j = row_indices_B[idx_B]; // Row index of B
                 data_t value_B = values_B[idx_B];
 
                 // Accumulate the product into C[i][j]
