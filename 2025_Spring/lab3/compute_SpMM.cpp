@@ -49,7 +49,7 @@ void sparse_matrix_multiply(data_t values_A[], int column_indices_A[], int row_p
 
             // Iterate over columns of B corresponding to row k
             for (int idx_B = col_ptr_B[k]; idx_B < col_ptr_B[k + 1]; idx_B++) {
-                int j = row_indices_B[idx_B]; // Column index of B
+                int j = row_indices_B[idx_B]; // Row index of B
                 float value_B = values_B[idx_B].to_float();
 
                 // Accumulate the product into C[i][j]
