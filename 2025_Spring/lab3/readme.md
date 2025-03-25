@@ -6,7 +6,7 @@ Sparse matrix multiplication is a critical operation in scientific computing, ma
 
 In this lab, we will:
 
-1. Implement the sparse matrix multiplication $C = A \times B$, where $A$ is in CSR format, $B$ is in CSC format, and $C$ is a dense matrix.
+1. Implement the sparse matrix multiplication $C = A \times B$, where $A$ is stored in CSR format, $B$'s transpose is stored in CSC format, and $C$ is a dense matrix.
 2. Load matrices $A$ and $B$ from binary files, compute the result $C$, and store the output $C$ as a binary file.
 3. Optimize your implementation to minimize latency and ensure it fits within FPGA resource constraints.
 
@@ -24,7 +24,7 @@ $$
 
 - Sparse matrix $A$ in CSR format:
   - `values_A[]`, `column_indices_A[]`, `row_ptr_A[]`.
-- Sparse matrix $B$ in CSC format:
+- Sparse matrix $B$ (transposed) in CSC format (equivalent to CSR format):
   - `values_B[]`, `row_indices_B[]`, `col_ptr_B[]`.
 - Both matrices $A$ and $B$ will be loaded from binary files:
   - `A_matrix_csr.bin`
@@ -88,7 +88,7 @@ Your implementation will be scored as follows:
     - Your latency is compared against the unoptimized baseline latency, under sparsity ratios of 0.1, 0.5, 0.8.
 
 - **Relative Speedup Score** (r): Competes within the class:
-    - If speedup is smaller than 10, r_i = 0.1;
+    - If speedup is smaller than 2, r_i = 0.1;
     - othersies, r_i = 0.2 + 0.2 * (1 - (your_rank_sparsity_i - 1} / (total_submission_sparsity_i - 1))
     - r = sum(r_i), i = 0.1, 0.5, 0.8
 
