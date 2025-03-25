@@ -35,25 +35,45 @@ void read_sparse_matrix_csc(const char *filename, data_t values[], int row_indic
     fclose(file);
 }
 
-
 // Sparse Matrix Multiplication: A (CSR) * B (CSC) = C (Dense)
 void sparse_matrix_multiply(data_t values_A[], int column_indices_A[], int row_ptr_A[], int nnz_A,
-                             data_t values_B[], int row_indices_B[], int col_ptr_B[], int nnz_B,
-                             float C[N][K]) 
+    data_t values_B[], int row_indices_B[], int col_ptr_B[], int nnz_B,
+    float C[N][K]) 
 {
-    // Perform Sparse x Sparse Multiplication
-    for (int i = 0; i < N; i++) {
-        for (int idx_A = row_ptr_A[i]; idx_A < row_ptr_A[i + 1]; idx_A++) {
-            int k = column_indices_A[idx_A]; // Column index of A
-            float value_A = values_A[idx_A].to_float();
 
-            // Iterate over columns of B corresponding to row k
-            for (int idx_B = col_ptr_B[k]; idx_B < col_ptr_B[k + 1]; idx_B++) {
-                int j = row_indices_B[idx_B]; // Row index of B
-                float value_B = values_B[idx_B].to_float();
-
-                // Accumulate the product into C[i][j]
-                C[i][j] += value_A * value_B;
+    zero_out_C: for (int i = 0; i < N; i++) {
+        for (int j = 0; j < K; j++) {
+            C[i][j] = 0.0f;
+        }
+    }
+    Step_1_For_SpM: for (int A_row = 0; A_row < N; A_row++) {
+        int index_for_A = row_ptr_A[A_row];
+        int ending_index_for_A = row_ptr_A[A_row + 1];
+        // Step 2, Loop CSR matrix B along its Column
+        int number_of_parallel_blocks = 16;
+        Step_2_For_SpM: for (int gen_var_parallel_blocks = 0; gen_var_parallel_blocks < number_of_parallel_blocks; gen_var_parallel_blocks++){
+            Partition_For_Step_2_For_SpM: for (int B_column = gen_var_parallel_blocks*(M/number_of_parallel_blocks); B_column < (gen_var_parallel_blocks+1)*(M/number_of_parallel_blocks); B_column++) {
+                int index_for_B = col_ptr_B[B_column];
+                int ending_index_for_B = col_ptr_B[B_column + 1];
+                
+                // Step 3, Loop through the elements in the row of A and the column of B
+                int idx_A = index_for_A;
+                int idx_B = index_for_B;
+                AB_Iteration_For_SpM: while (idx_A < ending_index_for_A && idx_B < ending_index_for_B) {
+                    if(column_indices_A[idx_A] == row_indices_B[idx_B]){
+                        double value_A = values_A[idx_A].to_double();
+                        double value_B = values_B[idx_B].to_double();
+                        C[A_row][B_column] += value_A * value_B;
+                        idx_A=idx_A+1;
+                        idx_B=idx_B+1;
+                    }
+                    else if(column_indices_A[idx_A] < row_indices_B[idx_B]){
+                        idx_A=idx_A+1;
+                    }
+                    else{
+                        idx_B=idx_B+1;
+                    }
+                }
             }
         }
     }
