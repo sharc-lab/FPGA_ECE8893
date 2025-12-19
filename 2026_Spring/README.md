@@ -2,6 +2,8 @@
 *Georgia Tech — Spring 2025*  
 *Instructor: Prof. Cong “Callie” Hao*
 
+Leaderboard spreadsheet: [Google Sheets](https://docs.google.com/spreadsheets/d/1spuqURsfj5vi8TcwEBRE93xImNIR5sKu3sXLidmMI_g)
+
 ---
 
 ## Course Philosophy
