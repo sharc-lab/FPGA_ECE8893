@@ -1,5 +1,5 @@
 # ECE 8893 / Advanced FPGA Programming  
-*Georgia Tech — Spring 2025*  
+*Georgia Tech — Spring 2026*  
 *Instructor: Prof. Cong “Callie” Hao*
 
 ### Course Schedule, Sign-up Sheets, and Leaderboards for Labs: [Google Sheets](https://docs.google.com/spreadsheets/d/1spuqURsfj5vi8TcwEBRE93xImNIR5sKu3sXLidmMI_g)
