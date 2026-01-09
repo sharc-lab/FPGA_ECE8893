@@ -10,7 +10,7 @@
 
 ECE 8893 is a **hands-on, performance-driven** course on designing and optimizing FPGA accelerators using High-Level Synthesis (HLS).
 
-There are **no exams**, **no quizzes**, and **no long reports**.  
+There are **no exams**, **no long reports**, only very light quizzes.
 Your grade reflects **how fast, correct, and implementable** your hardware designs are.
 
 Think of this class as:
@@ -46,16 +46,15 @@ Your score depends on how fast and efficiently your FPGA design runs **relative 
 - it passes correctness checks, and
 - it successfully completes implementation (place & route).
 
-### 100% Based on Measured Performance (Ranking Style)
+### Grade breakdown
+- 93% from Measured Performance (Ranking Style). Each lab is ranked based on achieved speedup. Grades are assigned by **ranking**, not absolute performance thresholds.
+- 5% from guest lecture quizzes
+- 2% from student presentation attendance
 
-Each lab is ranked based on achieved speedup.  
-Expected (approximate) distribution:
-
+### Expected (approximate) distribution:
 - **Top 80% → A**  
 - **Next 15% → B**  
 - **Bottom 5% → C**
-
-Grades are assigned by **ranking**, not absolute performance thresholds.
 
 ---
 
@@ -95,7 +94,7 @@ If **either correctness or implementation fails**, the score for that lab is **0
 
 ---
 
-## Lab Weights
+## Lab Weights (93% of the final score)
 
 - **Lab 0:** 0% (ungraded, just to get familiar with the flow)
 - **Lab 1:** 10%  
@@ -105,11 +104,9 @@ If **either correctness or implementation fails**, the score for that lab is **0
 
 ---
 
-## Score Calculation
+## Lab Score Calculation
 
-Each lab is scored based on **performance, timeliness, and implementation success**.
-
-For each lab:
+Each lab is scored based on **performance, timeliness, and implementation success**:
 
 ### Step 1: Measure Speedup
 - Speedup is computed as:
@@ -151,13 +148,6 @@ Your final lab score combines:
 In short:
 
 > **Fast + correct + on-time + implementable designs win.**
-
----
-
-Expected (approximate) final distribution:
-- **Top ~80% → A**  
-- **Next ~15% → B**  
-- **Bottom ~5% → C**
 
 ---
 
