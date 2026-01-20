@@ -9,6 +9,7 @@ add_files top.cpp
 # add testbench
 add_files -tb host.cpp
 
+# stop automatic unrolling and pipelining by Vitis so baseline design fits on FPGA
 config_unroll -tripcount_threshold 0
 config_compile -pipeline_loops 0
 
