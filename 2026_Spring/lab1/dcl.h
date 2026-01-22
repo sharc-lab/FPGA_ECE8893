@@ -13,7 +13,7 @@
 // Fixed-point types
 // data_t: stored grid values
 // acc_t: wider accumulator for weighted sums
-typedef ap_fixed<24, 8, AP_RND, AP_SAT> data_t;
+typedef ap_fixed<24, 10, AP_RND, AP_SAT> data_t;
 
 //
 // Top-level kernel prototype
