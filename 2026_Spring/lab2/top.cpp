@@ -9,6 +9,11 @@
 
 void top_kernel(const data_t A_in[NX][NY],
                 data_t A_out[NX][NY]) {
+#pragma HLS interface m_axi port=A_in offset=slave bundle=A_in
+#pragma HLS interface m_axi port=A_out offset=slave bundle=A_out
+#pragma HLS interface s_axilite port=return
+
+
     static data_t cur[NX][NY];
     static data_t nxt[NX][NY];
 

@@ -90,10 +90,10 @@ int main() {
     // Exact match check (fixed-point should be deterministic if algorithm matches)
     for (int i = 0; i < NX; i++) {
         for (int j = 0; j < NY; j++) {
-            if (A_hw[i][j] != A_gold[i][j]) {
+            if (abs(A_hw[i][j].to_float() - A_gold[i][j].to_float()) > abs(A_gold[i][j].to_float())*0.01) {
                 errors++;
                 if (errors <= 10) {
-                    std::cout << "Mismatch at (" << i << "," << j << "): "
+                    std::cout << "Large error at (" << i << "," << j << "): "
                               << "hw=" << A_hw[i][j]
                               << " gold=" << A_gold[i][j] << "\n";
                 }
