@@ -18,8 +18,13 @@ static inline data_t clamp_fp(data_t x, data_t lo, data_t hi) {
     return x;
 }
 
-void top_kernel(const data_t in[N],
-                data_t out[N]) {
+void top_kernel(const data_t in[N], data_t out[N]) {
+
+#pragma HLS interface m_axi port=in offset=slave bundle=in
+#pragma HLS interface m_axi port=out offset=slave bundle=out
+#pragma HLS interface s_axilite port=return
+
+
     static data_t s0[N];               // after preprocess
     static data_t s1[N];               // after transform
     static stat_t stats[N / BLOCK];    // 1 stat per block

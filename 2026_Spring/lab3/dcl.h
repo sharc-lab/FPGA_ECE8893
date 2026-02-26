@@ -9,10 +9,10 @@
 #define BLOCK 256        // block size for stats (rate mismatch)
 
 // Fixed-point types
-typedef ap_fixed<20, 6, AP_RND, AP_SAT> data_t;   // main signal
+typedef ap_fixed<32, 6, AP_RND, AP_SAT> data_t;   // main signal
 typedef ap_fixed<36, 12, AP_RND, AP_SAT> acc_t;   // accumulator for reductions
-typedef ap_fixed<28, 10, AP_RND, AP_SAT> stat_t;  // per-block statistic
-typedef ap_fixed<28, 10, AP_RND, AP_SAT> coef_t;  // coefficients
+typedef ap_fixed<32, 10, AP_RND, AP_SAT> stat_t;  // per-block statistic
+typedef ap_fixed<32, 10, AP_RND, AP_SAT> coef_t;  // coefficients
 
 // Top-level kernel prototype
 void top_kernel(const data_t in[N],

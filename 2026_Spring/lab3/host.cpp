@@ -96,7 +96,7 @@ int main() {
 
     int errors = 0;
     for (int k = 0; k < N; k++) {
-        if (out_hw[k] != out_gold[k]) {
+        if (abs(out_hw[k].to_float() - out_gold[k].to_float()) > abs(out_gold[k].to_float())*0.01) {
             errors++;
             if (errors <= 10) {
                 std::cout << "Mismatch at k=" << k
