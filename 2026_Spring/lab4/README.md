@@ -82,10 +82,12 @@ Designs that fail implementation will receive **no credit**, regardless of perfo
 
 ## Performance Metric and Ranking
 
-- Performance is measured using **cycle count** from **C/RTL co-simulation**.
+- Performance is measured using **cycle count** from **C/RTL co-simulation** and **clock period** from **Implementation**.
 - **Speedup** is defined as:
 
-    `speedup = baseline_cycles / optimized_cycles`
+    `speedup = baseline_latency / optimized_latency`
+- **Latency** is defined as:
+    `latency = cycle count * clock period`
 
 
 - All submissions will be **ranked globally by speedup**.
